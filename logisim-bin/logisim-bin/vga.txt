@@ -1,0 +1,2798 @@
+Disassembly of section .text:
+
+00000000 <_start>:
+       0:	00000413          	addi	s0,zero,0
+       4:	00093137          	lui	sp,0x93
+       8:	00010113          	addi	sp,sp,0 # 93000 <_end>
+       c:	000010b7          	lui	ra,0x1
+      10:	dbc08093          	addi	ra,ra,-580 # dbc <_trm_init>
+      14:	000080e7          	jalr	ra,0(ra)
+
+00000018 <display_image>:
+      18:	fe012823          	sw	zero,-16(sp)
+      1c:	fea10923          	sb	a0,-14(sp)
+      20:	fea12423          	sw	a0,-24(sp)
+      24:	fe914203          	lbu	tp,-23(sp)
+      28:	fe4109a3          	sb	tp,-13(sp)
+      2c:	ff012783          	lw	a5,-16(sp)
+
+00000030 <slli_3>:
+      30:	00f787b3          	add	a5,a5,a5
+      34:	00f787b3          	add	a5,a5,a5
+      38:	0004b6b7          	lui	a3,0x4b
+      3c:	af868693          	addi	a3,a3,-1288 # 4aaf8 <image>
+      40:	fdc10113          	addi	sp,sp,-36
+      44:	00d787b3          	add	a5,a5,a3
+      48:	10000713          	addi	a4,zero,256
+      4c:	00f12423          	sw	a5,8(sp)
+      50:	00010593          	addi	a1,sp,0
+      54:	00100793          	addi	a5,zero,1
+      58:	00b00513          	addi	a0,zero,11
+      5c:	02112023          	sw	ra,32(sp)
+      60:	00012023          	sw	zero,0(sp)
+      64:	00012223          	sw	zero,4(sp)
+      68:	00e12623          	sw	a4,12(sp)
+      6c:	00e12823          	sw	a4,16(sp)
+      70:	00f10a23          	sb	a5,20(sp)
+      74:	000010b7          	lui	ra,0x1
+      78:	a8408093          	addi	ra,ra,-1404 # a84 <ioe_write>
+      7c:	000080e7          	jalr	ra,0(ra)
+      80:	02012083          	lw	ra,32(sp)
+      84:	02410113          	addi	sp,sp,36
+      88:	00008067          	jalr	zero,0(ra)
+
+0000008c <main>:
+      8c:	ff410113          	addi	sp,sp,-12
+      90:	00112423          	sw	ra,8(sp)
+      94:	000010b7          	lui	ra,0x1
+      98:	a7c08093          	addi	ra,ra,-1412 # a7c <ioe_init>
+      9c:	000080e7          	jalr	ra,0(ra)
+      a0:	00000513          	addi	a0,zero,0
+      a4:	01800093          	addi	ra,zero,24
+      a8:	000080e7          	jalr	ra,0(ra)
+      ac:	00812083          	lw	ra,8(sp)
+      b0:	00000513          	addi	a0,zero,0
+      b4:	00c10113          	addi	sp,sp,12
+      b8:	00008067          	jalr	zero,0(ra)
+
+000000bc <__am_gpu_fbdraw>:
+      bc:	00852583          	lw	a1,8(a0)
+
+000000c0 <beq_56.L27>:
+      c0:	feb12823          	sw	a1,-16(sp)
+      c4:	fe812e23          	sw	s0,-4(sp)
+      c8:	00003437          	lui	s0,0x3
+      cc:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+      d0:	ff014183          	lbu	gp,-16(sp)
+      d4:	003401b3          	add	gp,s0,gp
+      d8:	0001c183          	lbu	gp,0(gp)
+      dc:	ff114203          	lbu	tp,-15(sp)
+      e0:	00440233          	add	tp,s0,tp
+      e4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+      e8:	004181b3          	add	gp,gp,tp
+      ec:	ff214203          	lbu	tp,-14(sp)
+      f0:	00440233          	add	tp,s0,tp
+      f4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+      f8:	004181b3          	add	gp,gp,tp
+      fc:	ff314203          	lbu	tp,-13(sp)
+     100:	00440233          	add	tp,s0,tp
+     104:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     108:	004181b3          	add	gp,gp,tp
+     10c:	00003237          	lui	tp,0x3
+     110:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     114:	00320233          	add	tp,tp,gp
+     118:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     11c:	ffc12403          	lw	s0,-4(sp)
+
+00000120 <slli_65>:
+     120:	00420233          	add	tp,tp,tp
+     124:	00420233          	add	tp,tp,tp
+     128:	00410233          	add	tp,sp,tp
+     12c:	000011b7          	lui	gp,0x1
+     130:	86418193          	addi	gp,gp,-1948 # 864 <non_taken_184.L11+0x30>
+     134:	fe312823          	sw	gp,-16(sp)
+     138:	14800193          	addi	gp,zero,328
+     13c:	fe312623          	sw	gp,-20(sp)
+     140:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     144:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000148 <non_taken_56.L27>:
+     148:	01052703          	lw	a4,16(a0)
+     14c:	00052683          	lw	a3,0(a0)
+     150:	00452783          	lw	a5,4(a0)
+     154:	fe810113          	addi	sp,sp,-24
+     158:	00e12423          	sw	a4,8(sp)
+     15c:	00112a23          	sw	ra,20(sp)
+     160:	00812823          	sw	s0,16(sp)
+     164:	00912623          	sw	s1,12(sp)
+
+00000168 <or_68>:
+     168:	fed12823          	sw	a3,-16(sp)
+     16c:	fef12623          	sw	a5,-20(sp)
+     170:	00013737          	lui	a4,0x13
+     174:	a0070713          	addi	a4,a4,-1536 # 12a00 <_logic_shift_table+0x10000>
+     178:	fe012223          	sw	zero,-28(sp)
+     17c:	ff314203          	lbu	tp,-13(sp)
+     180:	fe4102a3          	sb	tp,-27(sp)
+     184:	fef14203          	lbu	tp,-17(sp)
+     188:	fe410223          	sb	tp,-28(sp)
+     18c:	fe412203          	lw	tp,-28(sp)
+     190:	00470233          	add	tp,a4,tp
+     194:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     198:	fe4105a3          	sb	tp,-21(sp)
+     19c:	ff214203          	lbu	tp,-14(sp)
+     1a0:	fe4102a3          	sb	tp,-27(sp)
+     1a4:	fee14203          	lbu	tp,-18(sp)
+     1a8:	fe410223          	sb	tp,-28(sp)
+     1ac:	fe412203          	lw	tp,-28(sp)
+     1b0:	00470233          	add	tp,a4,tp
+     1b4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     1b8:	fe410523          	sb	tp,-22(sp)
+     1bc:	ff114203          	lbu	tp,-15(sp)
+     1c0:	fe4102a3          	sb	tp,-27(sp)
+     1c4:	fed14203          	lbu	tp,-19(sp)
+     1c8:	fe410223          	sb	tp,-28(sp)
+     1cc:	fe412203          	lw	tp,-28(sp)
+     1d0:	00470233          	add	tp,a4,tp
+     1d4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     1d8:	fe4104a3          	sb	tp,-23(sp)
+     1dc:	ff014203          	lbu	tp,-16(sp)
+     1e0:	fe4102a3          	sb	tp,-27(sp)
+     1e4:	fec14203          	lbu	tp,-20(sp)
+     1e8:	fe410223          	sb	tp,-28(sp)
+     1ec:	fe412203          	lw	tp,-28(sp)
+     1f0:	00470233          	add	tp,a4,tp
+     1f4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     1f8:	fe410423          	sb	tp,-24(sp)
+     1fc:	fe812703          	lw	a4,-24(sp)
+     200:	00c52603          	lw	a2,12(a0)
+
+00000204 <beq_75.L30>:
+     204:	fee12823          	sw	a4,-16(sp)
+     208:	fe812e23          	sw	s0,-4(sp)
+     20c:	00003437          	lui	s0,0x3
+     210:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+     214:	ff014183          	lbu	gp,-16(sp)
+     218:	003401b3          	add	gp,s0,gp
+     21c:	0001c183          	lbu	gp,0(gp)
+     220:	ff114203          	lbu	tp,-15(sp)
+     224:	00440233          	add	tp,s0,tp
+     228:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     22c:	004181b3          	add	gp,gp,tp
+     230:	ff214203          	lbu	tp,-14(sp)
+     234:	00440233          	add	tp,s0,tp
+     238:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     23c:	004181b3          	add	gp,gp,tp
+     240:	ff314203          	lbu	tp,-13(sp)
+     244:	00440233          	add	tp,s0,tp
+     248:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     24c:	004181b3          	add	gp,gp,tp
+     250:	00003237          	lui	tp,0x3
+     254:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     258:	00320233          	add	tp,tp,gp
+     25c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     260:	ffc12403          	lw	s0,-4(sp)
+
+00000264 <slli_84>:
+     264:	00420233          	add	tp,tp,tp
+     268:	00420233          	add	tp,tp,tp
+     26c:	00410233          	add	tp,sp,tp
+     270:	66800193          	addi	gp,zero,1640
+     274:	fe312823          	sw	gp,-16(sp)
+     278:	28800193          	addi	gp,zero,648
+     27c:	fe312623          	sw	gp,-20(sp)
+     280:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     284:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000288 <non_taken_75.L30>:
+     288:	00c68733          	add	a4,a3,a2
+     28c:	10000513          	addi	a0,zero,256
+
+00000290 <blt_88.L18>:
+     290:	fe812e23          	sw	s0,-4(sp)
+     294:	fe912c23          	sw	s1,-8(sp)
+     298:	fee12823          	sw	a4,-16(sp)
+     29c:	00050413          	addi	s0,a0,0
+     2a0:	ff012483          	lw	s1,-16(sp)
+     2a4:	fe812423          	sw	s0,-24(sp)
+     2a8:	feb14183          	lbu	gp,-21(sp)
+
+000002ac <slli_93>:
+     2ac:	003181b3          	add	gp,gp,gp
+     2b0:	fe312423          	sw	gp,-24(sp)
+     2b4:	fe914183          	lbu	gp,-23(sp)
+
+000002b8 <slli_95>:
+     2b8:	003181b3          	add	gp,gp,gp
+     2bc:	fe912423          	sw	s1,-24(sp)
+     2c0:	feb14203          	lbu	tp,-21(sp)
+
+000002c4 <slli_98>:
+     2c4:	00420233          	add	tp,tp,tp
+     2c8:	fe412423          	sw	tp,-24(sp)
+     2cc:	fe914203          	lbu	tp,-23(sp)
+     2d0:	004181b3          	add	gp,gp,tp
+
+000002d4 <slli_100>:
+     2d4:	003181b3          	add	gp,gp,gp
+
+000002d8 <sub_101>:
+     2d8:	fe312a23          	sw	gp,-12(sp)
+     2dc:	fe912423          	sw	s1,-24(sp)
+     2e0:	00033237          	lui	tp,0x33
+     2e4:	90020213          	addi	tp,tp,-1792 # 32900 <_logic_shift_table+0x2ff00>
+     2e8:	feb14183          	lbu	gp,-21(sp)
+     2ec:	004181b3          	add	gp,gp,tp
+     2f0:	0001c183          	lbu	gp,0(gp)
+     2f4:	fe3103a3          	sb	gp,-25(sp)
+     2f8:	fea14183          	lbu	gp,-22(sp)
+     2fc:	004181b3          	add	gp,gp,tp
+     300:	0001c183          	lbu	gp,0(gp)
+     304:	fe310323          	sb	gp,-26(sp)
+     308:	fe914183          	lbu	gp,-23(sp)
+     30c:	004181b3          	add	gp,gp,tp
+     310:	0001c183          	lbu	gp,0(gp)
+     314:	fe3102a3          	sb	gp,-27(sp)
+     318:	fe814183          	lbu	gp,-24(sp)
+     31c:	004181b3          	add	gp,gp,tp
+     320:	0001c183          	lbu	gp,0(gp)
+     324:	fe310223          	sb	gp,-28(sp)
+     328:	ff412183          	lw	gp,-12(sp)
+     32c:	fe412203          	lw	tp,-28(sp)
+     330:	00440233          	add	tp,s0,tp
+     334:	00120213          	addi	tp,tp,1 # 1 <_start+0x1>
+     338:	fe412423          	sw	tp,-24(sp)
+     33c:	feb14203          	lbu	tp,-21(sp)
+
+00000340 <slli_106>:
+     340:	00420233          	add	tp,tp,tp
+     344:	fe412423          	sw	tp,-24(sp)
+     348:	fe914203          	lbu	tp,-23(sp)
+     34c:	004181b3          	add	gp,gp,tp
+     350:	00003237          	lui	tp,0x3
+     354:	90820213          	addi	tp,tp,-1784 # 2908 <_slt1_table>
+     358:	00320233          	add	tp,tp,gp
+     35c:	ff812483          	lw	s1,-8(sp)
+     360:	ffc12403          	lw	s0,-4(sp)
+     364:	00024203          	lbu	tp,0(tp) # 0 <_start>
+
+00000368 <slli_110>:
+     368:	00420233          	add	tp,tp,tp
+     36c:	00420233          	add	tp,tp,tp
+     370:	00410233          	add	tp,sp,tp
+     374:	000011b7          	lui	gp,0x1
+     378:	86818193          	addi	gp,gp,-1944 # 868 <non_taken_184.L11+0x34>
+     37c:	fe312823          	sw	gp,-16(sp)
+     380:	39000193          	addi	gp,zero,912
+     384:	fe312623          	sw	gp,-20(sp)
+     388:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     38c:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000390 <non_taken_88.L18>:
+     390:	00812703          	lw	a4,8(sp)
+     394:	10000513          	addi	a0,zero,256
+     398:	00e78733          	add	a4,a5,a4
+
+0000039c <blt_114.L18>:
+     39c:	fe812e23          	sw	s0,-4(sp)
+     3a0:	fe912c23          	sw	s1,-8(sp)
+     3a4:	fee12823          	sw	a4,-16(sp)
+     3a8:	00050413          	addi	s0,a0,0
+     3ac:	ff012483          	lw	s1,-16(sp)
+     3b0:	fe812423          	sw	s0,-24(sp)
+     3b4:	feb14183          	lbu	gp,-21(sp)
+
+000003b8 <slli_119>:
+     3b8:	003181b3          	add	gp,gp,gp
+     3bc:	fe312423          	sw	gp,-24(sp)
+     3c0:	fe914183          	lbu	gp,-23(sp)
+
+000003c4 <slli_121>:
+     3c4:	003181b3          	add	gp,gp,gp
+     3c8:	fe912423          	sw	s1,-24(sp)
+     3cc:	feb14203          	lbu	tp,-21(sp)
+
+000003d0 <slli_124>:
+     3d0:	00420233          	add	tp,tp,tp
+     3d4:	fe412423          	sw	tp,-24(sp)
+     3d8:	fe914203          	lbu	tp,-23(sp)
+     3dc:	004181b3          	add	gp,gp,tp
+
+000003e0 <slli_126>:
+     3e0:	003181b3          	add	gp,gp,gp
+
+000003e4 <sub_127>:
+     3e4:	fe312a23          	sw	gp,-12(sp)
+     3e8:	fe912423          	sw	s1,-24(sp)
+     3ec:	00033237          	lui	tp,0x33
+     3f0:	90020213          	addi	tp,tp,-1792 # 32900 <_logic_shift_table+0x2ff00>
+     3f4:	feb14183          	lbu	gp,-21(sp)
+     3f8:	004181b3          	add	gp,gp,tp
+     3fc:	0001c183          	lbu	gp,0(gp)
+     400:	fe3103a3          	sb	gp,-25(sp)
+     404:	fea14183          	lbu	gp,-22(sp)
+     408:	004181b3          	add	gp,gp,tp
+     40c:	0001c183          	lbu	gp,0(gp)
+     410:	fe310323          	sb	gp,-26(sp)
+     414:	fe914183          	lbu	gp,-23(sp)
+     418:	004181b3          	add	gp,gp,tp
+     41c:	0001c183          	lbu	gp,0(gp)
+     420:	fe3102a3          	sb	gp,-27(sp)
+     424:	fe814183          	lbu	gp,-24(sp)
+     428:	004181b3          	add	gp,gp,tp
+     42c:	0001c183          	lbu	gp,0(gp)
+     430:	fe310223          	sb	gp,-28(sp)
+     434:	ff412183          	lw	gp,-12(sp)
+     438:	fe412203          	lw	tp,-28(sp)
+     43c:	00440233          	add	tp,s0,tp
+     440:	00120213          	addi	tp,tp,1 # 1 <_start+0x1>
+     444:	fe412423          	sw	tp,-24(sp)
+     448:	feb14203          	lbu	tp,-21(sp)
+
+0000044c <slli_132>:
+     44c:	00420233          	add	tp,tp,tp
+     450:	fe412423          	sw	tp,-24(sp)
+     454:	fe914203          	lbu	tp,-23(sp)
+     458:	004181b3          	add	gp,gp,tp
+     45c:	00003237          	lui	tp,0x3
+     460:	90820213          	addi	tp,tp,-1784 # 2908 <_slt1_table>
+     464:	00320233          	add	tp,tp,gp
+     468:	ff812483          	lw	s1,-8(sp)
+     46c:	ffc12403          	lw	s0,-4(sp)
+     470:	00024203          	lbu	tp,0(tp) # 0 <_start>
+
+00000474 <slli_136>:
+     474:	00420233          	add	tp,tp,tp
+     478:	00420233          	add	tp,tp,tp
+     47c:	00410233          	add	tp,sp,tp
+     480:	000011b7          	lui	gp,0x1
+     484:	86818193          	addi	gp,gp,-1944 # 868 <non_taken_184.L11+0x34>
+     488:	fe312823          	sw	gp,-16(sp)
+     48c:	49c00193          	addi	gp,zero,1180
+     490:	fe312623          	sw	gp,-20(sp)
+     494:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     498:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+0000049c <non_taken_114.L18>:
+     49c:	00f787b3          	add	a5,a5,a5
+     4a0:	00f787b3          	add	a5,a5,a5
+     4a4:	00f787b3          	add	a5,a5,a5
+     4a8:	00f787b3          	add	a5,a5,a5
+     4ac:	00f787b3          	add	a5,a5,a5
+     4b0:	00f787b3          	add	a5,a5,a5
+     4b4:	00f787b3          	add	a5,a5,a5
+     4b8:	00f787b3          	add	a5,a5,a5
+     4bc:	00d787b3          	add	a5,a5,a3
+
+000004c0 <slli_140>:
+     4c0:	00f787b3          	add	a5,a5,a5
+     4c4:	00f787b3          	add	a5,a5,a5
+     4c8:	20000437          	lui	s0,0x20000
+     4cc:	00f40433          	add	s0,s0,a5
+     4d0:	00812783          	lw	a5,8(sp)
+
+000004d4 <slli_141>:
+     4d4:	00c60633          	add	a2,a2,a2
+     4d8:	00c60633          	add	a2,a2,a2
+
+000004dc <bge_143.L8>:
+     4dc:	fef12423          	sw	a5,-24(sp)
+     4e0:	feb14183          	lbu	gp,-21(sp)
+
+000004e4 <slli_146>:
+     4e4:	003181b3          	add	gp,gp,gp
+     4e8:	fe312423          	sw	gp,-24(sp)
+     4ec:	fe914183          	lbu	gp,-23(sp)
+     4f0:	fff78213          	addi	tp,a5,-1
+     4f4:	fe412423          	sw	tp,-24(sp)
+     4f8:	feb14203          	lbu	tp,-21(sp)
+
+000004fc <slli_150>:
+     4fc:	00420233          	add	tp,tp,tp
+     500:	fe412423          	sw	tp,-24(sp)
+     504:	fe914203          	lbu	tp,-23(sp)
+     508:	004181b3          	add	gp,gp,tp
+     50c:	00003237          	lui	tp,0x3
+     510:	91820213          	addi	tp,tp,-1768 # 2918 <_or1_table>
+     514:	00418233          	add	tp,gp,tp
+     518:	00024203          	lbu	tp,0(tp) # 0 <_start>
+
+0000051c <slli_154>:
+     51c:	00420233          	add	tp,tp,tp
+     520:	00420233          	add	tp,tp,tp
+     524:	00410233          	add	tp,sp,tp
+     528:	65400193          	addi	gp,zero,1620
+     52c:	fe312823          	sw	gp,-16(sp)
+     530:	54000193          	addi	gp,zero,1344
+     534:	fe312623          	sw	gp,-20(sp)
+     538:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     53c:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000540 <non_taken_143.L8>:
+     540:	00000493          	addi	s1,zero,0
+     544:	00040513          	addi	a0,s0,0 # 20000000 <_end+0x1ff6d000>
+     548:	00b12223          	sw	a1,4(sp)
+     54c:	00c12023          	sw	a2,0(sp)
+     550:	000010b7          	lui	ra,0x1
+     554:	de008093          	addi	ra,ra,-544 # de0 <memcpy>
+     558:	000080e7          	jalr	ra,0(ra)
+     55c:	00012603          	lw	a2,0(sp)
+     560:	00412583          	lw	a1,4(sp)
+     564:	00812783          	lw	a5,8(sp)
+     568:	00148493          	addi	s1,s1,1
+     56c:	40040413          	addi	s0,s0,1024
+     570:	00c585b3          	add	a1,a1,a2
+
+00000574 <bne_160.L17>:
+     574:	fef12823          	sw	a5,-16(sp)
+     578:	fe912623          	sw	s1,-20(sp)
+     57c:	fe812e23          	sw	s0,-4(sp)
+     580:	fe912c23          	sw	s1,-8(sp)
+     584:	00002437          	lui	s0,0x2
+     588:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+     58c:	ff014183          	lbu	gp,-16(sp)
+     590:	00340233          	add	tp,s0,gp
+     594:	00100193          	addi	gp,zero,1
+     598:	00320023          	sb	gp,0(tp) # 0 <_start>
+     59c:	fec14183          	lbu	gp,-20(sp)
+     5a0:	003401b3          	add	gp,s0,gp
+     5a4:	00018023          	sb	zero,0(gp)
+     5a8:	00024183          	lbu	gp,0(tp) # 0 <_start>
+     5ac:	ff114483          	lbu	s1,-15(sp)
+     5b0:	00940233          	add	tp,s0,s1
+     5b4:	00100493          	addi	s1,zero,1
+     5b8:	00920023          	sb	s1,0(tp) # 0 <_start>
+     5bc:	fed14483          	lbu	s1,-19(sp)
+     5c0:	009404b3          	add	s1,s0,s1
+     5c4:	00048023          	sb	zero,0(s1)
+     5c8:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     5cc:	009181b3          	add	gp,gp,s1
+     5d0:	ff214483          	lbu	s1,-14(sp)
+     5d4:	00940233          	add	tp,s0,s1
+     5d8:	00100493          	addi	s1,zero,1
+     5dc:	00920023          	sb	s1,0(tp) # 0 <_start>
+     5e0:	fee14483          	lbu	s1,-18(sp)
+     5e4:	009404b3          	add	s1,s0,s1
+     5e8:	00048023          	sb	zero,0(s1)
+     5ec:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     5f0:	009181b3          	add	gp,gp,s1
+     5f4:	ff314483          	lbu	s1,-13(sp)
+     5f8:	00940233          	add	tp,s0,s1
+     5fc:	00100493          	addi	s1,zero,1
+     600:	00920023          	sb	s1,0(tp) # 0 <_start>
+     604:	fef14483          	lbu	s1,-17(sp)
+     608:	009404b3          	add	s1,s0,s1
+     60c:	00048023          	sb	zero,0(s1)
+     610:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     614:	009181b3          	add	gp,gp,s1
+     618:	00003237          	lui	tp,0x3
+     61c:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     620:	00320233          	add	tp,tp,gp
+     624:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     628:	ff812483          	lw	s1,-8(sp)
+     62c:	ffc12403          	lw	s0,-4(sp)
+
+00000630 <slli_169>:
+     630:	00420233          	add	tp,tp,tp
+     634:	00420233          	add	tp,tp,tp
+     638:	00410233          	add	tp,sp,tp
+     63c:	65400193          	addi	gp,zero,1620
+     640:	fe312823          	sw	gp,-16(sp)
+     644:	54400193          	addi	gp,zero,1348
+     648:	fe312623          	sw	gp,-20(sp)
+     64c:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     650:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000654 <non_taken_160.L17>:
+     654:	01412083          	lw	ra,20(sp)
+     658:	01012403          	lw	s0,16(sp)
+     65c:	00c12483          	lw	s1,12(sp)
+     660:	01810113          	addi	sp,sp,24
+     664:	00008067          	jalr	zero,0(ra)
+     668:	10000713          	addi	a4,zero,256
+
+0000066c <bne_172.L10>:
+     66c:	fec12823          	sw	a2,-16(sp)
+     670:	fee12623          	sw	a4,-20(sp)
+     674:	fe812e23          	sw	s0,-4(sp)
+     678:	fe912c23          	sw	s1,-8(sp)
+     67c:	00002437          	lui	s0,0x2
+     680:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+     684:	ff014183          	lbu	gp,-16(sp)
+     688:	00340233          	add	tp,s0,gp
+     68c:	00100193          	addi	gp,zero,1
+     690:	00320023          	sb	gp,0(tp) # 0 <_start>
+     694:	fec14183          	lbu	gp,-20(sp)
+     698:	003401b3          	add	gp,s0,gp
+     69c:	00018023          	sb	zero,0(gp)
+     6a0:	00024183          	lbu	gp,0(tp) # 0 <_start>
+     6a4:	ff114483          	lbu	s1,-15(sp)
+     6a8:	00940233          	add	tp,s0,s1
+     6ac:	00100493          	addi	s1,zero,1
+     6b0:	00920023          	sb	s1,0(tp) # 0 <_start>
+     6b4:	fed14483          	lbu	s1,-19(sp)
+     6b8:	009404b3          	add	s1,s0,s1
+     6bc:	00048023          	sb	zero,0(s1)
+     6c0:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     6c4:	009181b3          	add	gp,gp,s1
+     6c8:	ff214483          	lbu	s1,-14(sp)
+     6cc:	00940233          	add	tp,s0,s1
+     6d0:	00100493          	addi	s1,zero,1
+     6d4:	00920023          	sb	s1,0(tp) # 0 <_start>
+     6d8:	fee14483          	lbu	s1,-18(sp)
+     6dc:	009404b3          	add	s1,s0,s1
+     6e0:	00048023          	sb	zero,0(s1)
+     6e4:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     6e8:	009181b3          	add	gp,gp,s1
+     6ec:	ff314483          	lbu	s1,-13(sp)
+     6f0:	00940233          	add	tp,s0,s1
+     6f4:	00100493          	addi	s1,zero,1
+     6f8:	00920023          	sb	s1,0(tp) # 0 <_start>
+     6fc:	fef14483          	lbu	s1,-17(sp)
+     700:	009404b3          	add	s1,s0,s1
+     704:	00048023          	sb	zero,0(s1)
+     708:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     70c:	009181b3          	add	gp,gp,s1
+     710:	00003237          	lui	tp,0x3
+     714:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     718:	00320233          	add	tp,tp,gp
+     71c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     720:	ff812483          	lw	s1,-8(sp)
+     724:	ffc12403          	lw	s0,-4(sp)
+
+00000728 <slli_181>:
+     728:	00420233          	add	tp,tp,tp
+     72c:	00420233          	add	tp,tp,tp
+     730:	00410233          	add	tp,sp,tp
+     734:	74c00193          	addi	gp,zero,1868
+     738:	fe312823          	sw	gp,-16(sp)
+     73c:	28800193          	addi	gp,zero,648
+     740:	fe312623          	sw	gp,-20(sp)
+     744:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     748:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+0000074c <non_taken_172.L10>:
+     74c:	00812703          	lw	a4,8(sp)
+
+00000750 <bne_184.L11>:
+     750:	fee12823          	sw	a4,-16(sp)
+     754:	fec12623          	sw	a2,-20(sp)
+     758:	fe812e23          	sw	s0,-4(sp)
+     75c:	fe912c23          	sw	s1,-8(sp)
+     760:	00002437          	lui	s0,0x2
+     764:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+     768:	ff014183          	lbu	gp,-16(sp)
+     76c:	00340233          	add	tp,s0,gp
+     770:	00100193          	addi	gp,zero,1
+     774:	00320023          	sb	gp,0(tp) # 0 <_start>
+     778:	fec14183          	lbu	gp,-20(sp)
+     77c:	003401b3          	add	gp,s0,gp
+     780:	00018023          	sb	zero,0(gp)
+     784:	00024183          	lbu	gp,0(tp) # 0 <_start>
+     788:	ff114483          	lbu	s1,-15(sp)
+     78c:	00940233          	add	tp,s0,s1
+     790:	00100493          	addi	s1,zero,1
+     794:	00920023          	sb	s1,0(tp) # 0 <_start>
+     798:	fed14483          	lbu	s1,-19(sp)
+     79c:	009404b3          	add	s1,s0,s1
+     7a0:	00048023          	sb	zero,0(s1)
+     7a4:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     7a8:	009181b3          	add	gp,gp,s1
+     7ac:	ff214483          	lbu	s1,-14(sp)
+     7b0:	00940233          	add	tp,s0,s1
+     7b4:	00100493          	addi	s1,zero,1
+     7b8:	00920023          	sb	s1,0(tp) # 0 <_start>
+     7bc:	fee14483          	lbu	s1,-18(sp)
+     7c0:	009404b3          	add	s1,s0,s1
+     7c4:	00048023          	sb	zero,0(s1)
+     7c8:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     7cc:	009181b3          	add	gp,gp,s1
+     7d0:	ff314483          	lbu	s1,-13(sp)
+     7d4:	00940233          	add	tp,s0,s1
+     7d8:	00100493          	addi	s1,zero,1
+     7dc:	00920023          	sb	s1,0(tp) # 0 <_start>
+     7e0:	fef14483          	lbu	s1,-17(sp)
+     7e4:	009404b3          	add	s1,s0,s1
+     7e8:	00048023          	sb	zero,0(s1)
+     7ec:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     7f0:	009181b3          	add	gp,gp,s1
+     7f4:	00003237          	lui	tp,0x3
+     7f8:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     7fc:	00320233          	add	tp,tp,gp
+     800:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     804:	ff812483          	lw	s1,-8(sp)
+     808:	ffc12403          	lw	s0,-4(sp)
+
+0000080c <slli_193>:
+     80c:	00420233          	add	tp,tp,tp
+     810:	00420233          	add	tp,tp,tp
+     814:	00410233          	add	tp,sp,tp
+     818:	000011b7          	lui	gp,0x1
+     81c:	83418193          	addi	gp,gp,-1996 # 834 <non_taken_184.L11>
+     820:	fe312823          	sw	gp,-16(sp)
+     824:	39000193          	addi	gp,zero,912
+     828:	fe312623          	sw	gp,-20(sp)
+     82c:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     830:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000834 <non_taken_184.L11>:
+     834:	01012403          	lw	s0,16(sp)
+     838:	01412083          	lw	ra,20(sp)
+     83c:	00c12483          	lw	s1,12(sp)
+     840:	00040637          	lui	a2,0x40
+     844:	20000537          	lui	a0,0x20000
+     848:	01810113          	addi	sp,sp,24
+     84c:	00001237          	lui	tp,0x1
+     850:	de020213          	addi	tp,tp,-544 # de0 <memcpy>
+     854:	00020067          	jalr	zero,0(tp) # 0 <_start>
+     858:	000010b7          	lui	ra,0x1
+     85c:	de008093          	addi	ra,ra,-544 # de0 <memcpy>
+     860:	000080e7          	jalr	ra,0(ra)
+     864:	00008067          	jalr	zero,0(ra)
+     868:	0004b437          	lui	s0,0x4b
+     86c:	a0040413          	addi	s0,s0,-1536 # 4aa00 <_logic_shift_table+0x48000>
+     870:	04100513          	addi	a0,zero,65
+     874:	00140413          	addi	s0,s0,1
+     878:	000010b7          	lui	ra,0x1
+     87c:	da408093          	addi	ra,ra,-604 # da4 <putch>
+     880:	000080e7          	jalr	ra,0(ra)
+     884:	00044503          	lbu	a0,0(s0)
+
+00000888 <bne_205.L14>:
+     888:	fea12823          	sw	a0,-16(sp)
+     88c:	fe812e23          	sw	s0,-4(sp)
+     890:	00003437          	lui	s0,0x3
+     894:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+     898:	ff014183          	lbu	gp,-16(sp)
+     89c:	003401b3          	add	gp,s0,gp
+     8a0:	0001c183          	lbu	gp,0(gp)
+     8a4:	ff114203          	lbu	tp,-15(sp)
+     8a8:	00440233          	add	tp,s0,tp
+     8ac:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     8b0:	004181b3          	add	gp,gp,tp
+     8b4:	ff214203          	lbu	tp,-14(sp)
+     8b8:	00440233          	add	tp,s0,tp
+     8bc:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     8c0:	004181b3          	add	gp,gp,tp
+     8c4:	ff314203          	lbu	tp,-13(sp)
+     8c8:	00440233          	add	tp,s0,tp
+     8cc:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     8d0:	004181b3          	add	gp,gp,tp
+     8d4:	00003237          	lui	tp,0x3
+     8d8:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     8dc:	00320233          	add	tp,tp,gp
+     8e0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     8e4:	ffc12403          	lw	s0,-4(sp)
+
+000008e8 <slli_214>:
+     8e8:	00420233          	add	tp,tp,tp
+     8ec:	00420233          	add	tp,tp,tp
+     8f0:	00410233          	add	tp,sp,tp
+     8f4:	000011b7          	lui	gp,0x1
+     8f8:	91418193          	addi	gp,gp,-1772 # 914 <non_taken_205.L14>
+     8fc:	fe312823          	sw	gp,-16(sp)
+     900:	000011b7          	lui	gp,0x1
+     904:	87418193          	addi	gp,gp,-1932 # 874 <non_taken_184.L11+0x40>
+     908:	fe312623          	sw	gp,-20(sp)
+     90c:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     910:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000914 <non_taken_205.L14>:
+     914:	0004b437          	lui	s0,0x4b
+     918:	a0c40413          	addi	s0,s0,-1524 # 4aa0c <_logic_shift_table+0x4800c>
+     91c:	06200513          	addi	a0,zero,98
+     920:	00140413          	addi	s0,s0,1
+     924:	000010b7          	lui	ra,0x1
+     928:	da408093          	addi	ra,ra,-604 # da4 <putch>
+     92c:	000080e7          	jalr	ra,0(ra)
+     930:	00044503          	lbu	a0,0(s0)
+
+00000934 <bne_222.L15>:
+     934:	fea12823          	sw	a0,-16(sp)
+     938:	fe812e23          	sw	s0,-4(sp)
+     93c:	00003437          	lui	s0,0x3
+     940:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+     944:	ff014183          	lbu	gp,-16(sp)
+     948:	003401b3          	add	gp,s0,gp
+     94c:	0001c183          	lbu	gp,0(gp)
+     950:	ff114203          	lbu	tp,-15(sp)
+     954:	00440233          	add	tp,s0,tp
+     958:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     95c:	004181b3          	add	gp,gp,tp
+     960:	ff214203          	lbu	tp,-14(sp)
+     964:	00440233          	add	tp,s0,tp
+     968:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     96c:	004181b3          	add	gp,gp,tp
+     970:	ff314203          	lbu	tp,-13(sp)
+     974:	00440233          	add	tp,s0,tp
+     978:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     97c:	004181b3          	add	gp,gp,tp
+     980:	00003237          	lui	tp,0x3
+     984:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     988:	00320233          	add	tp,tp,gp
+     98c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     990:	ffc12403          	lw	s0,-4(sp)
+
+00000994 <slli_231>:
+     994:	00420233          	add	tp,tp,tp
+     998:	00420233          	add	tp,tp,tp
+     99c:	00410233          	add	tp,sp,tp
+     9a0:	000011b7          	lui	gp,0x1
+     9a4:	9c018193          	addi	gp,gp,-1600 # 9c0 <non_taken_222.L15>
+     9a8:	fe312823          	sw	gp,-16(sp)
+     9ac:	000011b7          	lui	gp,0x1
+     9b0:	92018193          	addi	gp,gp,-1760 # 920 <non_taken_205.L14+0xc>
+     9b4:	fe312623          	sw	gp,-20(sp)
+     9b8:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     9bc:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+000009c0 <non_taken_222.L15>:
+     9c0:	0004b437          	lui	s0,0x4b
+     9c4:	a2040413          	addi	s0,s0,-1504 # 4aa20 <_logic_shift_table+0x48020>
+     9c8:	02000513          	addi	a0,zero,32
+     9cc:	00140413          	addi	s0,s0,1
+     9d0:	000010b7          	lui	ra,0x1
+     9d4:	da408093          	addi	ra,ra,-604 # da4 <putch>
+     9d8:	000080e7          	jalr	ra,0(ra)
+     9dc:	00044503          	lbu	a0,0(s0)
+
+000009e0 <bne_239.L16>:
+     9e0:	fea12823          	sw	a0,-16(sp)
+     9e4:	fe812e23          	sw	s0,-4(sp)
+     9e8:	00003437          	lui	s0,0x3
+     9ec:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+     9f0:	ff014183          	lbu	gp,-16(sp)
+     9f4:	003401b3          	add	gp,s0,gp
+     9f8:	0001c183          	lbu	gp,0(gp)
+     9fc:	ff114203          	lbu	tp,-15(sp)
+     a00:	00440233          	add	tp,s0,tp
+     a04:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     a08:	004181b3          	add	gp,gp,tp
+     a0c:	ff214203          	lbu	tp,-14(sp)
+     a10:	00440233          	add	tp,s0,tp
+     a14:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     a18:	004181b3          	add	gp,gp,tp
+     a1c:	ff314203          	lbu	tp,-13(sp)
+     a20:	00440233          	add	tp,s0,tp
+     a24:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     a28:	004181b3          	add	gp,gp,tp
+     a2c:	00003237          	lui	tp,0x3
+     a30:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     a34:	00320233          	add	tp,tp,gp
+     a38:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     a3c:	ffc12403          	lw	s0,-4(sp)
+
+00000a40 <slli_248>:
+     a40:	00420233          	add	tp,tp,tp
+     a44:	00420233          	add	tp,tp,tp
+     a48:	00410233          	add	tp,sp,tp
+     a4c:	000011b7          	lui	gp,0x1
+     a50:	a6c18193          	addi	gp,gp,-1428 # a6c <non_taken_239.L16>
+     a54:	fe312823          	sw	gp,-16(sp)
+     a58:	000011b7          	lui	gp,0x1
+     a5c:	9cc18193          	addi	gp,gp,-1588 # 9cc <non_taken_222.L15+0xc>
+     a60:	fe312623          	sw	gp,-20(sp)
+     a64:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     a68:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000a6c <non_taken_239.L16>:
+     a6c:	00100513          	addi	a0,zero,1
+     a70:	000010b7          	lui	ra,0x1
+     a74:	db008093          	addi	ra,ra,-592 # db0 <halt>
+     a78:	000080e7          	jalr	ra,0(ra)
+
+00000a7c <ioe_init>:
+     a7c:	00100513          	addi	a0,zero,1
+     a80:	00008067          	jalr	zero,0(ra)
+
+00000a84 <ioe_write>:
+     a84:	00b00793          	addi	a5,zero,11
+
+00000a88 <bne_257.L44>:
+     a88:	fea12823          	sw	a0,-16(sp)
+     a8c:	fef12623          	sw	a5,-20(sp)
+     a90:	fe812e23          	sw	s0,-4(sp)
+     a94:	fe912c23          	sw	s1,-8(sp)
+     a98:	00002437          	lui	s0,0x2
+     a9c:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+     aa0:	ff014183          	lbu	gp,-16(sp)
+     aa4:	00340233          	add	tp,s0,gp
+     aa8:	00100193          	addi	gp,zero,1
+     aac:	00320023          	sb	gp,0(tp) # 0 <_start>
+     ab0:	fec14183          	lbu	gp,-20(sp)
+     ab4:	003401b3          	add	gp,s0,gp
+     ab8:	00018023          	sb	zero,0(gp)
+     abc:	00024183          	lbu	gp,0(tp) # 0 <_start>
+     ac0:	ff114483          	lbu	s1,-15(sp)
+     ac4:	00940233          	add	tp,s0,s1
+     ac8:	00100493          	addi	s1,zero,1
+     acc:	00920023          	sb	s1,0(tp) # 0 <_start>
+     ad0:	fed14483          	lbu	s1,-19(sp)
+     ad4:	009404b3          	add	s1,s0,s1
+     ad8:	00048023          	sb	zero,0(s1)
+     adc:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     ae0:	009181b3          	add	gp,gp,s1
+     ae4:	ff214483          	lbu	s1,-14(sp)
+     ae8:	00940233          	add	tp,s0,s1
+     aec:	00100493          	addi	s1,zero,1
+     af0:	00920023          	sb	s1,0(tp) # 0 <_start>
+     af4:	fee14483          	lbu	s1,-18(sp)
+     af8:	009404b3          	add	s1,s0,s1
+     afc:	00048023          	sb	zero,0(s1)
+     b00:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     b04:	009181b3          	add	gp,gp,s1
+     b08:	ff314483          	lbu	s1,-13(sp)
+     b0c:	00940233          	add	tp,s0,s1
+     b10:	00100493          	addi	s1,zero,1
+     b14:	00920023          	sb	s1,0(tp) # 0 <_start>
+     b18:	fef14483          	lbu	s1,-17(sp)
+     b1c:	009404b3          	add	s1,s0,s1
+     b20:	00048023          	sb	zero,0(s1)
+     b24:	00024483          	lbu	s1,0(tp) # 0 <_start>
+     b28:	009181b3          	add	gp,gp,s1
+     b2c:	00003237          	lui	tp,0x3
+     b30:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     b34:	00320233          	add	tp,tp,gp
+     b38:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     b3c:	ff812483          	lw	s1,-8(sp)
+     b40:	ffc12403          	lw	s0,-4(sp)
+
+00000b44 <slli_266>:
+     b44:	00420233          	add	tp,tp,tp
+     b48:	00420233          	add	tp,tp,tp
+     b4c:	00410233          	add	tp,sp,tp
+     b50:	000011b7          	lui	gp,0x1
+     b54:	b7018193          	addi	gp,gp,-1168 # b70 <non_taken_257.L44>
+     b58:	fe312823          	sw	gp,-16(sp)
+     b5c:	000011b7          	lui	gp,0x1
+     b60:	b8418193          	addi	gp,gp,-1148 # b84 <non_taken_257.L44+0x14>
+     b64:	fe312623          	sw	gp,-20(sp)
+     b68:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     b6c:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000b70 <non_taken_257.L44>:
+     b70:	00058513          	addi	a0,a1,0
+     b74:	0bc00213          	addi	tp,zero,188
+     b78:	00020067          	jalr	zero,0(tp) # 0 <_start>
+     b7c:	0bc00093          	addi	ra,zero,188
+     b80:	000080e7          	jalr	ra,0(ra)
+     b84:	ff410113          	addi	sp,sp,-12
+     b88:	00812223          	sw	s0,4(sp)
+     b8c:	00112423          	sw	ra,8(sp)
+     b90:	0004b437          	lui	s0,0x4b
+     b94:	a0040413          	addi	s0,s0,-1536 # 4aa00 <_logic_shift_table+0x48000>
+     b98:	04100513          	addi	a0,zero,65
+     b9c:	00140413          	addi	s0,s0,1
+     ba0:	000010b7          	lui	ra,0x1
+     ba4:	da408093          	addi	ra,ra,-604 # da4 <putch>
+     ba8:	000080e7          	jalr	ra,0(ra)
+     bac:	00044503          	lbu	a0,0(s0)
+
+00000bb0 <bne_278.L35>:
+     bb0:	fea12823          	sw	a0,-16(sp)
+     bb4:	fe812e23          	sw	s0,-4(sp)
+     bb8:	00003437          	lui	s0,0x3
+     bbc:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+     bc0:	ff014183          	lbu	gp,-16(sp)
+     bc4:	003401b3          	add	gp,s0,gp
+     bc8:	0001c183          	lbu	gp,0(gp)
+     bcc:	ff114203          	lbu	tp,-15(sp)
+     bd0:	00440233          	add	tp,s0,tp
+     bd4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     bd8:	004181b3          	add	gp,gp,tp
+     bdc:	ff214203          	lbu	tp,-14(sp)
+     be0:	00440233          	add	tp,s0,tp
+     be4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     be8:	004181b3          	add	gp,gp,tp
+     bec:	ff314203          	lbu	tp,-13(sp)
+     bf0:	00440233          	add	tp,s0,tp
+     bf4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     bf8:	004181b3          	add	gp,gp,tp
+     bfc:	00003237          	lui	tp,0x3
+     c00:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     c04:	00320233          	add	tp,tp,gp
+     c08:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     c0c:	ffc12403          	lw	s0,-4(sp)
+
+00000c10 <slli_287>:
+     c10:	00420233          	add	tp,tp,tp
+     c14:	00420233          	add	tp,tp,tp
+     c18:	00410233          	add	tp,sp,tp
+     c1c:	000011b7          	lui	gp,0x1
+     c20:	c3c18193          	addi	gp,gp,-964 # c3c <non_taken_278.L35>
+     c24:	fe312823          	sw	gp,-16(sp)
+     c28:	000011b7          	lui	gp,0x1
+     c2c:	b9c18193          	addi	gp,gp,-1124 # b9c <non_taken_257.L44+0x2c>
+     c30:	fe312623          	sw	gp,-20(sp)
+     c34:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     c38:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000c3c <non_taken_278.L35>:
+     c3c:	0004b437          	lui	s0,0x4b
+     c40:	a6440413          	addi	s0,s0,-1436 # 4aa64 <_logic_shift_table+0x48064>
+     c44:	06900513          	addi	a0,zero,105
+     c48:	00140413          	addi	s0,s0,1
+     c4c:	000010b7          	lui	ra,0x1
+     c50:	da408093          	addi	ra,ra,-604 # da4 <putch>
+     c54:	000080e7          	jalr	ra,0(ra)
+     c58:	00044503          	lbu	a0,0(s0)
+
+00000c5c <bne_295.L36>:
+     c5c:	fea12823          	sw	a0,-16(sp)
+     c60:	fe812e23          	sw	s0,-4(sp)
+     c64:	00003437          	lui	s0,0x3
+     c68:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+     c6c:	ff014183          	lbu	gp,-16(sp)
+     c70:	003401b3          	add	gp,s0,gp
+     c74:	0001c183          	lbu	gp,0(gp)
+     c78:	ff114203          	lbu	tp,-15(sp)
+     c7c:	00440233          	add	tp,s0,tp
+     c80:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     c84:	004181b3          	add	gp,gp,tp
+     c88:	ff214203          	lbu	tp,-14(sp)
+     c8c:	00440233          	add	tp,s0,tp
+     c90:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     c94:	004181b3          	add	gp,gp,tp
+     c98:	ff314203          	lbu	tp,-13(sp)
+     c9c:	00440233          	add	tp,s0,tp
+     ca0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     ca4:	004181b3          	add	gp,gp,tp
+     ca8:	00003237          	lui	tp,0x3
+     cac:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     cb0:	00320233          	add	tp,tp,gp
+     cb4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     cb8:	ffc12403          	lw	s0,-4(sp)
+
+00000cbc <slli_304>:
+     cbc:	00420233          	add	tp,tp,tp
+     cc0:	00420233          	add	tp,tp,tp
+     cc4:	00410233          	add	tp,sp,tp
+     cc8:	000011b7          	lui	gp,0x1
+     ccc:	ce818193          	addi	gp,gp,-792 # ce8 <non_taken_295.L36>
+     cd0:	fe312823          	sw	gp,-16(sp)
+     cd4:	000011b7          	lui	gp,0x1
+     cd8:	c4818193          	addi	gp,gp,-952 # c48 <non_taken_278.L35+0xc>
+     cdc:	fe312623          	sw	gp,-20(sp)
+     ce0:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     ce4:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000ce8 <non_taken_295.L36>:
+     ce8:	0004b437          	lui	s0,0x4b
+     cec:	a7040413          	addi	s0,s0,-1424 # 4aa70 <_logic_shift_table+0x48070>
+     cf0:	02000513          	addi	a0,zero,32
+     cf4:	00140413          	addi	s0,s0,1
+     cf8:	000010b7          	lui	ra,0x1
+     cfc:	da408093          	addi	ra,ra,-604 # da4 <putch>
+     d00:	000080e7          	jalr	ra,0(ra)
+     d04:	00044503          	lbu	a0,0(s0)
+
+00000d08 <bne_312.L37>:
+     d08:	fea12823          	sw	a0,-16(sp)
+     d0c:	fe812e23          	sw	s0,-4(sp)
+     d10:	00003437          	lui	s0,0x3
+     d14:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+     d18:	ff014183          	lbu	gp,-16(sp)
+     d1c:	003401b3          	add	gp,s0,gp
+     d20:	0001c183          	lbu	gp,0(gp)
+     d24:	ff114203          	lbu	tp,-15(sp)
+     d28:	00440233          	add	tp,s0,tp
+     d2c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     d30:	004181b3          	add	gp,gp,tp
+     d34:	ff214203          	lbu	tp,-14(sp)
+     d38:	00440233          	add	tp,s0,tp
+     d3c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     d40:	004181b3          	add	gp,gp,tp
+     d44:	ff314203          	lbu	tp,-13(sp)
+     d48:	00440233          	add	tp,s0,tp
+     d4c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     d50:	004181b3          	add	gp,gp,tp
+     d54:	00003237          	lui	tp,0x3
+     d58:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+     d5c:	00320233          	add	tp,tp,gp
+     d60:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     d64:	ffc12403          	lw	s0,-4(sp)
+
+00000d68 <slli_321>:
+     d68:	00420233          	add	tp,tp,tp
+     d6c:	00420233          	add	tp,tp,tp
+     d70:	00410233          	add	tp,sp,tp
+     d74:	000011b7          	lui	gp,0x1
+     d78:	d9418193          	addi	gp,gp,-620 # d94 <non_taken_312.L37>
+     d7c:	fe312823          	sw	gp,-16(sp)
+     d80:	000011b7          	lui	gp,0x1
+     d84:	cf418193          	addi	gp,gp,-780 # cf4 <non_taken_295.L36+0xc>
+     d88:	fe312623          	sw	gp,-20(sp)
+     d8c:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     d90:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000d94 <non_taken_312.L37>:
+     d94:	00100513          	addi	a0,zero,1
+     d98:	000010b7          	lui	ra,0x1
+     d9c:	db008093          	addi	ra,ra,-592 # db0 <halt>
+     da0:	000080e7          	jalr	ra,0(ra)
+
+00000da4 <putch>:
+     da4:	100007b7          	lui	a5,0x10000
+     da8:	00a78023          	sb	a0,0(a5) # 10000000 <_end+0xff6d000>
+     dac:	00008067          	jalr	zero,0(ra)
+
+00000db0 <halt>:
+     db0:	00001237          	lui	tp,0x1
+     db4:	db020213          	addi	tp,tp,-592 # db0 <halt>
+     db8:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000dbc <_trm_init>:
+     dbc:	ff410113          	addi	sp,sp,-12
+     dc0:	0004b537          	lui	a0,0x4b
+     dc4:	ab450513          	addi	a0,a0,-1356 # 4aab4 <mainargs>
+     dc8:	00112423          	sw	ra,8(sp)
+     dcc:	08c00093          	addi	ra,zero,140
+     dd0:	000080e7          	jalr	ra,0(ra)
+     dd4:	000010b7          	lui	ra,0x1
+     dd8:	db008093          	addi	ra,ra,-592 # db0 <halt>
+     ddc:	000080e7          	jalr	ra,0(ra)
+
+00000de0 <memcpy>:
+     de0:	01f00793          	addi	a5,zero,31
+
+00000de4 <bgeu_439.L81>:
+     de4:	fe812e23          	sw	s0,-4(sp)
+     de8:	fe912c23          	sw	s1,-8(sp)
+     dec:	fec12823          	sw	a2,-16(sp)
+     df0:	00078413          	addi	s0,a5,0
+     df4:	ff012483          	lw	s1,-16(sp)
+     df8:	fe812423          	sw	s0,-24(sp)
+     dfc:	feb14183          	lbu	gp,-21(sp)
+
+00000e00 <slli_444>:
+     e00:	003181b3          	add	gp,gp,gp
+     e04:	fe312423          	sw	gp,-24(sp)
+     e08:	fe914183          	lbu	gp,-23(sp)
+
+00000e0c <slli_446>:
+     e0c:	003181b3          	add	gp,gp,gp
+     e10:	fe912423          	sw	s1,-24(sp)
+     e14:	feb14203          	lbu	tp,-21(sp)
+
+00000e18 <slli_449>:
+     e18:	00420233          	add	tp,tp,tp
+     e1c:	fe412423          	sw	tp,-24(sp)
+     e20:	fe914203          	lbu	tp,-23(sp)
+     e24:	004181b3          	add	gp,gp,tp
+
+00000e28 <slli_451>:
+     e28:	003181b3          	add	gp,gp,gp
+
+00000e2c <sub_452>:
+     e2c:	fe312a23          	sw	gp,-12(sp)
+     e30:	fe912423          	sw	s1,-24(sp)
+     e34:	00033237          	lui	tp,0x33
+     e38:	90020213          	addi	tp,tp,-1792 # 32900 <_logic_shift_table+0x2ff00>
+     e3c:	feb14183          	lbu	gp,-21(sp)
+     e40:	004181b3          	add	gp,gp,tp
+     e44:	0001c183          	lbu	gp,0(gp)
+     e48:	fe3103a3          	sb	gp,-25(sp)
+     e4c:	fea14183          	lbu	gp,-22(sp)
+     e50:	004181b3          	add	gp,gp,tp
+     e54:	0001c183          	lbu	gp,0(gp)
+     e58:	fe310323          	sb	gp,-26(sp)
+     e5c:	fe914183          	lbu	gp,-23(sp)
+     e60:	004181b3          	add	gp,gp,tp
+     e64:	0001c183          	lbu	gp,0(gp)
+     e68:	fe3102a3          	sb	gp,-27(sp)
+     e6c:	fe814183          	lbu	gp,-24(sp)
+     e70:	004181b3          	add	gp,gp,tp
+     e74:	0001c183          	lbu	gp,0(gp)
+     e78:	fe310223          	sb	gp,-28(sp)
+     e7c:	ff412183          	lw	gp,-12(sp)
+     e80:	fe412203          	lw	tp,-28(sp)
+     e84:	00440233          	add	tp,s0,tp
+     e88:	00120213          	addi	tp,tp,1 # 1 <_start+0x1>
+     e8c:	fe412423          	sw	tp,-24(sp)
+     e90:	feb14203          	lbu	tp,-21(sp)
+
+00000e94 <slli_457>:
+     e94:	00420233          	add	tp,tp,tp
+     e98:	fe412423          	sw	tp,-24(sp)
+     e9c:	fe914203          	lbu	tp,-23(sp)
+     ea0:	004181b3          	add	gp,gp,tp
+     ea4:	00003237          	lui	tp,0x3
+     ea8:	91020213          	addi	tp,tp,-1776 # 2910 <_sltu1_table>
+     eac:	00320233          	add	tp,tp,gp
+     eb0:	ff812483          	lw	s1,-8(sp)
+     eb4:	ffc12403          	lw	s0,-4(sp)
+     eb8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+
+00000ebc <slli_461>:
+     ebc:	00420233          	add	tp,tp,tp
+     ec0:	00420233          	add	tp,tp,tp
+     ec4:	00410233          	add	tp,sp,tp
+     ec8:	000011b7          	lui	gp,0x1
+     ecc:	ee818193          	addi	gp,gp,-280 # ee8 <non_taken_439.L81>
+     ed0:	fe312823          	sw	gp,-16(sp)
+     ed4:	000021b7          	lui	gp,0x2
+     ed8:	5c418193          	addi	gp,gp,1476 # 25c4 <non_taken_781.L70+0xc>
+     edc:	fe312623          	sw	gp,-20(sp)
+     ee0:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+     ee4:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00000ee8 <non_taken_439.L81>:
+     ee8:	fe312a23          	sw	gp,-12(sp)
+     eec:	feb12423          	sw	a1,-24(sp)
+     ef0:	00033237          	lui	tp,0x33
+     ef4:	90020213          	addi	tp,tp,-1792 # 32900 <_logic_shift_table+0x2ff00>
+     ef8:	feb14183          	lbu	gp,-21(sp)
+     efc:	004181b3          	add	gp,gp,tp
+     f00:	0001c183          	lbu	gp,0(gp)
+     f04:	fe3103a3          	sb	gp,-25(sp)
+     f08:	fea14183          	lbu	gp,-22(sp)
+     f0c:	004181b3          	add	gp,gp,tp
+     f10:	0001c183          	lbu	gp,0(gp)
+     f14:	fe310323          	sb	gp,-26(sp)
+     f18:	fe914183          	lbu	gp,-23(sp)
+     f1c:	004181b3          	add	gp,gp,tp
+     f20:	0001c183          	lbu	gp,0(gp)
+     f24:	fe3102a3          	sb	gp,-27(sp)
+     f28:	fe814183          	lbu	gp,-24(sp)
+     f2c:	004181b3          	add	gp,gp,tp
+     f30:	0001c183          	lbu	gp,0(gp)
+     f34:	fe310223          	sb	gp,-28(sp)
+     f38:	ff412183          	lw	gp,-12(sp)
+     f3c:	fe412203          	lw	tp,-28(sp)
+     f40:	004507b3          	add	a5,a0,tp
+     f44:	00178793          	addi	a5,a5,1
+
+00000f48 <andi_467>:
+     f48:	00700213          	addi	tp,zero,7
+
+00000f4c <and_468>:
+     f4c:	fef12823          	sw	a5,-16(sp)
+     f50:	fe412623          	sw	tp,-20(sp)
+     f54:	00003737          	lui	a4,0x3
+     f58:	a0070713          	addi	a4,a4,-1536 # 2a00 <_logic_shift_table>
+     f5c:	fe012223          	sw	zero,-28(sp)
+     f60:	ff314203          	lbu	tp,-13(sp)
+     f64:	fe4102a3          	sb	tp,-27(sp)
+     f68:	fef14203          	lbu	tp,-17(sp)
+     f6c:	fe410223          	sb	tp,-28(sp)
+     f70:	fe412203          	lw	tp,-28(sp)
+     f74:	00470233          	add	tp,a4,tp
+     f78:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     f7c:	fe4105a3          	sb	tp,-21(sp)
+     f80:	ff214203          	lbu	tp,-14(sp)
+     f84:	fe4102a3          	sb	tp,-27(sp)
+     f88:	fee14203          	lbu	tp,-18(sp)
+     f8c:	fe410223          	sb	tp,-28(sp)
+     f90:	fe412203          	lw	tp,-28(sp)
+     f94:	00470233          	add	tp,a4,tp
+     f98:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     f9c:	fe410523          	sb	tp,-22(sp)
+     fa0:	ff114203          	lbu	tp,-15(sp)
+     fa4:	fe4102a3          	sb	tp,-27(sp)
+     fa8:	fed14203          	lbu	tp,-19(sp)
+     fac:	fe410223          	sb	tp,-28(sp)
+     fb0:	fe412203          	lw	tp,-28(sp)
+     fb4:	00470233          	add	tp,a4,tp
+     fb8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     fbc:	fe4104a3          	sb	tp,-23(sp)
+     fc0:	ff014203          	lbu	tp,-16(sp)
+     fc4:	fe4102a3          	sb	tp,-27(sp)
+     fc8:	fec14203          	lbu	tp,-20(sp)
+     fcc:	fe410223          	sb	tp,-28(sp)
+     fd0:	fe412203          	lw	tp,-28(sp)
+     fd4:	00470233          	add	tp,a4,tp
+     fd8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+     fdc:	fe410423          	sb	tp,-24(sp)
+     fe0:	fe812703          	lw	a4,-24(sp)
+
+00000fe4 <bne_475.L94>:
+     fe4:	fee12823          	sw	a4,-16(sp)
+     fe8:	fe812e23          	sw	s0,-4(sp)
+     fec:	00003437          	lui	s0,0x3
+     ff0:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+     ff4:	ff014183          	lbu	gp,-16(sp)
+     ff8:	003401b3          	add	gp,s0,gp
+     ffc:	0001c183          	lbu	gp,0(gp)
+    1000:	ff114203          	lbu	tp,-15(sp)
+    1004:	00440233          	add	tp,s0,tp
+    1008:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    100c:	004181b3          	add	gp,gp,tp
+    1010:	ff214203          	lbu	tp,-14(sp)
+    1014:	00440233          	add	tp,s0,tp
+    1018:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    101c:	004181b3          	add	gp,gp,tp
+    1020:	ff314203          	lbu	tp,-13(sp)
+    1024:	00440233          	add	tp,s0,tp
+    1028:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    102c:	004181b3          	add	gp,gp,tp
+    1030:	00003237          	lui	tp,0x3
+    1034:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    1038:	00320233          	add	tp,tp,gp
+    103c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1040:	ffc12403          	lw	s0,-4(sp)
+
+00001044 <slli_484>:
+    1044:	00420233          	add	tp,tp,tp
+    1048:	00420233          	add	tp,tp,tp
+    104c:	00410233          	add	tp,sp,tp
+    1050:	000011b7          	lui	gp,0x1
+    1054:	07018193          	addi	gp,gp,112 # 1070 <andi_487>
+    1058:	fe312823          	sw	gp,-16(sp)
+    105c:	000021b7          	lui	gp,0x2
+    1060:	b0418193          	addi	gp,gp,-1276 # 1b04 <andi_636>
+    1064:	fe312623          	sw	gp,-20(sp)
+    1068:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    106c:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00001070 <andi_487>:
+    1070:	00700213          	addi	tp,zero,7
+
+00001074 <and_488>:
+    1074:	fea12823          	sw	a0,-16(sp)
+    1078:	fe412623          	sw	tp,-20(sp)
+    107c:	000037b7          	lui	a5,0x3
+    1080:	a0078793          	addi	a5,a5,-1536 # 2a00 <_logic_shift_table>
+    1084:	fe012223          	sw	zero,-28(sp)
+    1088:	ff314203          	lbu	tp,-13(sp)
+    108c:	fe4102a3          	sb	tp,-27(sp)
+    1090:	fef14203          	lbu	tp,-17(sp)
+    1094:	fe410223          	sb	tp,-28(sp)
+    1098:	fe412203          	lw	tp,-28(sp)
+    109c:	00478233          	add	tp,a5,tp
+    10a0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    10a4:	fe4105a3          	sb	tp,-21(sp)
+    10a8:	ff214203          	lbu	tp,-14(sp)
+    10ac:	fe4102a3          	sb	tp,-27(sp)
+    10b0:	fee14203          	lbu	tp,-18(sp)
+    10b4:	fe410223          	sb	tp,-28(sp)
+    10b8:	fe412203          	lw	tp,-28(sp)
+    10bc:	00478233          	add	tp,a5,tp
+    10c0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    10c4:	fe410523          	sb	tp,-22(sp)
+    10c8:	ff114203          	lbu	tp,-15(sp)
+    10cc:	fe4102a3          	sb	tp,-27(sp)
+    10d0:	fed14203          	lbu	tp,-19(sp)
+    10d4:	fe410223          	sb	tp,-28(sp)
+    10d8:	fe412203          	lw	tp,-28(sp)
+    10dc:	00478233          	add	tp,a5,tp
+    10e0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    10e4:	fe4104a3          	sb	tp,-23(sp)
+    10e8:	ff014203          	lbu	tp,-16(sp)
+    10ec:	fe4102a3          	sb	tp,-27(sp)
+    10f0:	fec14203          	lbu	tp,-20(sp)
+    10f4:	fe410223          	sb	tp,-28(sp)
+    10f8:	fe412203          	lw	tp,-28(sp)
+    10fc:	00478233          	add	tp,a5,tp
+    1100:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1104:	fe410423          	sb	tp,-24(sp)
+    1108:	fe812783          	lw	a5,-24(sp)
+    110c:	00800693          	addi	a3,zero,8
+
+00001110 <sub_495>:
+    1110:	fe312a23          	sw	gp,-12(sp)
+    1114:	fef12423          	sw	a5,-24(sp)
+    1118:	00033237          	lui	tp,0x33
+    111c:	90020213          	addi	tp,tp,-1792 # 32900 <_logic_shift_table+0x2ff00>
+    1120:	feb14183          	lbu	gp,-21(sp)
+    1124:	004181b3          	add	gp,gp,tp
+    1128:	0001c183          	lbu	gp,0(gp)
+    112c:	fe3103a3          	sb	gp,-25(sp)
+    1130:	fea14183          	lbu	gp,-22(sp)
+    1134:	004181b3          	add	gp,gp,tp
+    1138:	0001c183          	lbu	gp,0(gp)
+    113c:	fe310323          	sb	gp,-26(sp)
+    1140:	fe914183          	lbu	gp,-23(sp)
+    1144:	004181b3          	add	gp,gp,tp
+    1148:	0001c183          	lbu	gp,0(gp)
+    114c:	fe3102a3          	sb	gp,-27(sp)
+    1150:	fe814183          	lbu	gp,-24(sp)
+    1154:	004181b3          	add	gp,gp,tp
+    1158:	0001c183          	lbu	gp,0(gp)
+    115c:	fe310223          	sb	gp,-28(sp)
+    1160:	ff412183          	lw	gp,-12(sp)
+    1164:	fe412203          	lw	tp,-28(sp)
+    1168:	004686b3          	add	a3,a3,tp
+    116c:	00168693          	addi	a3,a3,1
+    1170:	ff860613          	addi	a2,a2,-8 # 3fff8 <_logic_shift_table+0x3d5f8>
+    1174:	00c78633          	add	a2,a5,a2
+    1178:	00d583b3          	add	t2,a1,a3
+    117c:	00050793          	addi	a5,a0,0
+    1180:	0005c703          	lbu	a4,0(a1)
+    1184:	00158593          	addi	a1,a1,1
+    1188:	00178793          	addi	a5,a5,1
+    118c:	fee78fa3          	sb	a4,-1(a5)
+
+00001190 <bne_498.L71>:
+    1190:	feb12823          	sw	a1,-16(sp)
+    1194:	fe712623          	sw	t2,-20(sp)
+    1198:	fe812e23          	sw	s0,-4(sp)
+    119c:	fe912c23          	sw	s1,-8(sp)
+    11a0:	00002437          	lui	s0,0x2
+    11a4:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+    11a8:	ff014183          	lbu	gp,-16(sp)
+    11ac:	00340233          	add	tp,s0,gp
+    11b0:	00100193          	addi	gp,zero,1
+    11b4:	00320023          	sb	gp,0(tp) # 0 <_start>
+    11b8:	fec14183          	lbu	gp,-20(sp)
+    11bc:	003401b3          	add	gp,s0,gp
+    11c0:	00018023          	sb	zero,0(gp)
+    11c4:	00024183          	lbu	gp,0(tp) # 0 <_start>
+    11c8:	ff114483          	lbu	s1,-15(sp)
+    11cc:	00940233          	add	tp,s0,s1
+    11d0:	00100493          	addi	s1,zero,1
+    11d4:	00920023          	sb	s1,0(tp) # 0 <_start>
+    11d8:	fed14483          	lbu	s1,-19(sp)
+    11dc:	009404b3          	add	s1,s0,s1
+    11e0:	00048023          	sb	zero,0(s1)
+    11e4:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    11e8:	009181b3          	add	gp,gp,s1
+    11ec:	ff214483          	lbu	s1,-14(sp)
+    11f0:	00940233          	add	tp,s0,s1
+    11f4:	00100493          	addi	s1,zero,1
+    11f8:	00920023          	sb	s1,0(tp) # 0 <_start>
+    11fc:	fee14483          	lbu	s1,-18(sp)
+    1200:	009404b3          	add	s1,s0,s1
+    1204:	00048023          	sb	zero,0(s1)
+    1208:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    120c:	009181b3          	add	gp,gp,s1
+    1210:	ff314483          	lbu	s1,-13(sp)
+    1214:	00940233          	add	tp,s0,s1
+    1218:	00100493          	addi	s1,zero,1
+    121c:	00920023          	sb	s1,0(tp) # 0 <_start>
+    1220:	fef14483          	lbu	s1,-17(sp)
+    1224:	009404b3          	add	s1,s0,s1
+    1228:	00048023          	sb	zero,0(s1)
+    122c:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    1230:	009181b3          	add	gp,gp,s1
+    1234:	00003237          	lui	tp,0x3
+    1238:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    123c:	00320233          	add	tp,tp,gp
+    1240:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1244:	ff812483          	lw	s1,-8(sp)
+    1248:	ffc12403          	lw	s0,-4(sp)
+
+0000124c <slli_507>:
+    124c:	00420233          	add	tp,tp,tp
+    1250:	00420233          	add	tp,tp,tp
+    1254:	00410233          	add	tp,sp,tp
+    1258:	000011b7          	lui	gp,0x1
+    125c:	27818193          	addi	gp,gp,632 # 1278 <non_taken_498.L71>
+    1260:	fe312823          	sw	gp,-16(sp)
+    1264:	000011b7          	lui	gp,0x1
+    1268:	18018193          	addi	gp,gp,384 # 1180 <sub_495+0x70>
+    126c:	fe312623          	sw	gp,-20(sp)
+    1270:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    1274:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00001278 <non_taken_498.L71>:
+    1278:	01f00793          	addi	a5,zero,31
+    127c:	00d506b3          	add	a3,a0,a3
+
+00001280 <bgeu_511.L82>:
+    1280:	fe812e23          	sw	s0,-4(sp)
+    1284:	fe912c23          	sw	s1,-8(sp)
+    1288:	fec12823          	sw	a2,-16(sp)
+    128c:	00078413          	addi	s0,a5,0
+    1290:	ff012483          	lw	s1,-16(sp)
+    1294:	fe812423          	sw	s0,-24(sp)
+    1298:	feb14183          	lbu	gp,-21(sp)
+
+0000129c <slli_516>:
+    129c:	003181b3          	add	gp,gp,gp
+    12a0:	fe312423          	sw	gp,-24(sp)
+    12a4:	fe914183          	lbu	gp,-23(sp)
+
+000012a8 <slli_518>:
+    12a8:	003181b3          	add	gp,gp,gp
+    12ac:	fe912423          	sw	s1,-24(sp)
+    12b0:	feb14203          	lbu	tp,-21(sp)
+
+000012b4 <slli_521>:
+    12b4:	00420233          	add	tp,tp,tp
+    12b8:	fe412423          	sw	tp,-24(sp)
+    12bc:	fe914203          	lbu	tp,-23(sp)
+    12c0:	004181b3          	add	gp,gp,tp
+
+000012c4 <slli_523>:
+    12c4:	003181b3          	add	gp,gp,gp
+
+000012c8 <sub_524>:
+    12c8:	fe312a23          	sw	gp,-12(sp)
+    12cc:	fe912423          	sw	s1,-24(sp)
+    12d0:	00033237          	lui	tp,0x33
+    12d4:	90020213          	addi	tp,tp,-1792 # 32900 <_logic_shift_table+0x2ff00>
+    12d8:	feb14183          	lbu	gp,-21(sp)
+    12dc:	004181b3          	add	gp,gp,tp
+    12e0:	0001c183          	lbu	gp,0(gp)
+    12e4:	fe3103a3          	sb	gp,-25(sp)
+    12e8:	fea14183          	lbu	gp,-22(sp)
+    12ec:	004181b3          	add	gp,gp,tp
+    12f0:	0001c183          	lbu	gp,0(gp)
+    12f4:	fe310323          	sb	gp,-26(sp)
+    12f8:	fe914183          	lbu	gp,-23(sp)
+    12fc:	004181b3          	add	gp,gp,tp
+    1300:	0001c183          	lbu	gp,0(gp)
+    1304:	fe3102a3          	sb	gp,-27(sp)
+    1308:	fe814183          	lbu	gp,-24(sp)
+    130c:	004181b3          	add	gp,gp,tp
+    1310:	0001c183          	lbu	gp,0(gp)
+    1314:	fe310223          	sb	gp,-28(sp)
+    1318:	ff412183          	lw	gp,-12(sp)
+    131c:	fe412203          	lw	tp,-28(sp)
+    1320:	00440233          	add	tp,s0,tp
+    1324:	00120213          	addi	tp,tp,1 # 1 <_start+0x1>
+    1328:	fe412423          	sw	tp,-24(sp)
+    132c:	feb14203          	lbu	tp,-21(sp)
+
+00001330 <slli_529>:
+    1330:	00420233          	add	tp,tp,tp
+    1334:	fe412423          	sw	tp,-24(sp)
+    1338:	fe914203          	lbu	tp,-23(sp)
+    133c:	004181b3          	add	gp,gp,tp
+    1340:	00003237          	lui	tp,0x3
+    1344:	91020213          	addi	tp,tp,-1776 # 2910 <_sltu1_table>
+    1348:	00320233          	add	tp,tp,gp
+    134c:	ff812483          	lw	s1,-8(sp)
+    1350:	ffc12403          	lw	s0,-4(sp)
+    1354:	00024203          	lbu	tp,0(tp) # 0 <_start>
+
+00001358 <slli_533>:
+    1358:	00420233          	add	tp,tp,tp
+    135c:	00420233          	add	tp,tp,tp
+    1360:	00410233          	add	tp,sp,tp
+    1364:	000011b7          	lui	gp,0x1
+    1368:	38418193          	addi	gp,gp,900 # 1384 <non_taken_511.L82>
+    136c:	fe312823          	sw	gp,-16(sp)
+    1370:	000021b7          	lui	gp,0x2
+    1374:	67418193          	addi	gp,gp,1652 # 2674 <non_taken_795.L70+0x20>
+    1378:	fe312623          	sw	gp,-20(sp)
+    137c:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    1380:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00001384 <non_taken_511.L82>:
+    1384:	fe060593          	addi	a1,a2,-32
+
+00001388 <andi_536>:
+    1388:	fe000213          	addi	tp,zero,-32
+
+0000138c <and_537>:
+    138c:	feb12823          	sw	a1,-16(sp)
+    1390:	fe412623          	sw	tp,-20(sp)
+    1394:	000035b7          	lui	a1,0x3
+    1398:	a0058593          	addi	a1,a1,-1536 # 2a00 <_logic_shift_table>
+    139c:	fe012223          	sw	zero,-28(sp)
+    13a0:	ff314203          	lbu	tp,-13(sp)
+    13a4:	fe4102a3          	sb	tp,-27(sp)
+    13a8:	fef14203          	lbu	tp,-17(sp)
+    13ac:	fe410223          	sb	tp,-28(sp)
+    13b0:	fe412203          	lw	tp,-28(sp)
+    13b4:	00458233          	add	tp,a1,tp
+    13b8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    13bc:	fe4105a3          	sb	tp,-21(sp)
+    13c0:	ff214203          	lbu	tp,-14(sp)
+    13c4:	fe4102a3          	sb	tp,-27(sp)
+    13c8:	fee14203          	lbu	tp,-18(sp)
+    13cc:	fe410223          	sb	tp,-28(sp)
+    13d0:	fe412203          	lw	tp,-28(sp)
+    13d4:	00458233          	add	tp,a1,tp
+    13d8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    13dc:	fe410523          	sb	tp,-22(sp)
+    13e0:	ff114203          	lbu	tp,-15(sp)
+    13e4:	fe4102a3          	sb	tp,-27(sp)
+    13e8:	fed14203          	lbu	tp,-19(sp)
+    13ec:	fe410223          	sb	tp,-28(sp)
+    13f0:	fe412203          	lw	tp,-28(sp)
+    13f4:	00458233          	add	tp,a1,tp
+    13f8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    13fc:	fe4104a3          	sb	tp,-23(sp)
+    1400:	ff014203          	lbu	tp,-16(sp)
+    1404:	fe4102a3          	sb	tp,-27(sp)
+    1408:	fec14203          	lbu	tp,-20(sp)
+    140c:	fe410223          	sb	tp,-28(sp)
+    1410:	fe412203          	lw	tp,-28(sp)
+    1414:	00458233          	add	tp,a1,tp
+    1418:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    141c:	fe410423          	sb	tp,-24(sp)
+    1420:	fe812583          	lw	a1,-24(sp)
+    1424:	02058593          	addi	a1,a1,32
+    1428:	00b682b3          	add	t0,a3,a1
+    142c:	00038313          	addi	t1,t2,0
+    1430:	00032703          	lw	a4,0(t1)
+    1434:	00432783          	lw	a5,4(t1)
+    1438:	02030313          	addi	t1,t1,32
+    143c:	00e6a023          	sw	a4,0(a3)
+    1440:	00f6a223          	sw	a5,4(a3)
+    1444:	fe832703          	lw	a4,-24(t1)
+    1448:	fec32783          	lw	a5,-20(t1)
+    144c:	02068693          	addi	a3,a3,32
+    1450:	fee6a423          	sw	a4,-24(a3)
+    1454:	fef6a623          	sw	a5,-20(a3)
+    1458:	ff032703          	lw	a4,-16(t1)
+    145c:	ff432783          	lw	a5,-12(t1)
+    1460:	fee6a823          	sw	a4,-16(a3)
+    1464:	fef6aa23          	sw	a5,-12(a3)
+    1468:	ff832703          	lw	a4,-8(t1)
+    146c:	ffc32783          	lw	a5,-4(t1)
+    1470:	fee6ac23          	sw	a4,-8(a3)
+    1474:	fef6ae23          	sw	a5,-4(a3)
+
+00001478 <bne_544.L73>:
+    1478:	fed12823          	sw	a3,-16(sp)
+    147c:	fe512623          	sw	t0,-20(sp)
+    1480:	fe812e23          	sw	s0,-4(sp)
+    1484:	fe912c23          	sw	s1,-8(sp)
+    1488:	00002437          	lui	s0,0x2
+    148c:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+    1490:	ff014183          	lbu	gp,-16(sp)
+    1494:	00340233          	add	tp,s0,gp
+    1498:	00100193          	addi	gp,zero,1
+    149c:	00320023          	sb	gp,0(tp) # 0 <_start>
+    14a0:	fec14183          	lbu	gp,-20(sp)
+    14a4:	003401b3          	add	gp,s0,gp
+    14a8:	00018023          	sb	zero,0(gp)
+    14ac:	00024183          	lbu	gp,0(tp) # 0 <_start>
+    14b0:	ff114483          	lbu	s1,-15(sp)
+    14b4:	00940233          	add	tp,s0,s1
+    14b8:	00100493          	addi	s1,zero,1
+    14bc:	00920023          	sb	s1,0(tp) # 0 <_start>
+    14c0:	fed14483          	lbu	s1,-19(sp)
+    14c4:	009404b3          	add	s1,s0,s1
+    14c8:	00048023          	sb	zero,0(s1)
+    14cc:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    14d0:	009181b3          	add	gp,gp,s1
+    14d4:	ff214483          	lbu	s1,-14(sp)
+    14d8:	00940233          	add	tp,s0,s1
+    14dc:	00100493          	addi	s1,zero,1
+    14e0:	00920023          	sb	s1,0(tp) # 0 <_start>
+    14e4:	fee14483          	lbu	s1,-18(sp)
+    14e8:	009404b3          	add	s1,s0,s1
+    14ec:	00048023          	sb	zero,0(s1)
+    14f0:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    14f4:	009181b3          	add	gp,gp,s1
+    14f8:	ff314483          	lbu	s1,-13(sp)
+    14fc:	00940233          	add	tp,s0,s1
+    1500:	00100493          	addi	s1,zero,1
+    1504:	00920023          	sb	s1,0(tp) # 0 <_start>
+    1508:	fef14483          	lbu	s1,-17(sp)
+    150c:	009404b3          	add	s1,s0,s1
+    1510:	00048023          	sb	zero,0(s1)
+    1514:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    1518:	009181b3          	add	gp,gp,s1
+    151c:	00003237          	lui	tp,0x3
+    1520:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    1524:	00320233          	add	tp,tp,gp
+    1528:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    152c:	ff812483          	lw	s1,-8(sp)
+    1530:	ffc12403          	lw	s0,-4(sp)
+
+00001534 <slli_553>:
+    1534:	00420233          	add	tp,tp,tp
+    1538:	00420233          	add	tp,tp,tp
+    153c:	00410233          	add	tp,sp,tp
+    1540:	000011b7          	lui	gp,0x1
+    1544:	56018193          	addi	gp,gp,1376 # 1560 <andi_556>
+    1548:	fe312823          	sw	gp,-16(sp)
+    154c:	000011b7          	lui	gp,0x1
+    1550:	43018193          	addi	gp,gp,1072 # 1430 <and_537+0xa4>
+    1554:	fe312623          	sw	gp,-20(sp)
+    1558:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    155c:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00001560 <andi_556>:
+    1560:	01800213          	addi	tp,zero,24
+
+00001564 <and_557>:
+    1564:	fec12823          	sw	a2,-16(sp)
+    1568:	fe412623          	sw	tp,-20(sp)
+    156c:	00003737          	lui	a4,0x3
+    1570:	a0070713          	addi	a4,a4,-1536 # 2a00 <_logic_shift_table>
+    1574:	fe012223          	sw	zero,-28(sp)
+    1578:	ff314203          	lbu	tp,-13(sp)
+    157c:	fe4102a3          	sb	tp,-27(sp)
+    1580:	fef14203          	lbu	tp,-17(sp)
+    1584:	fe410223          	sb	tp,-28(sp)
+    1588:	fe412203          	lw	tp,-28(sp)
+    158c:	00470233          	add	tp,a4,tp
+    1590:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1594:	fe4105a3          	sb	tp,-21(sp)
+    1598:	ff214203          	lbu	tp,-14(sp)
+    159c:	fe4102a3          	sb	tp,-27(sp)
+    15a0:	fee14203          	lbu	tp,-18(sp)
+    15a4:	fe410223          	sb	tp,-28(sp)
+    15a8:	fe412203          	lw	tp,-28(sp)
+    15ac:	00470233          	add	tp,a4,tp
+    15b0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    15b4:	fe410523          	sb	tp,-22(sp)
+    15b8:	ff114203          	lbu	tp,-15(sp)
+    15bc:	fe4102a3          	sb	tp,-27(sp)
+    15c0:	fed14203          	lbu	tp,-19(sp)
+    15c4:	fe410223          	sb	tp,-28(sp)
+    15c8:	fe412203          	lw	tp,-28(sp)
+    15cc:	00470233          	add	tp,a4,tp
+    15d0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    15d4:	fe4104a3          	sb	tp,-23(sp)
+    15d8:	ff014203          	lbu	tp,-16(sp)
+    15dc:	fe4102a3          	sb	tp,-27(sp)
+    15e0:	fec14203          	lbu	tp,-20(sp)
+    15e4:	fe410223          	sb	tp,-28(sp)
+    15e8:	fe412203          	lw	tp,-28(sp)
+    15ec:	00470233          	add	tp,a4,tp
+    15f0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    15f4:	fe410423          	sb	tp,-24(sp)
+    15f8:	fe812703          	lw	a4,-24(sp)
+    15fc:	00b385b3          	add	a1,t2,a1
+
+00001600 <andi_564>:
+    1600:	01f00213          	addi	tp,zero,31
+
+00001604 <and_565>:
+    1604:	fec12823          	sw	a2,-16(sp)
+    1608:	fe412623          	sw	tp,-20(sp)
+    160c:	00003637          	lui	a2,0x3
+    1610:	a0060613          	addi	a2,a2,-1536 # 2a00 <_logic_shift_table>
+    1614:	fe012223          	sw	zero,-28(sp)
+    1618:	ff314203          	lbu	tp,-13(sp)
+    161c:	fe4102a3          	sb	tp,-27(sp)
+    1620:	fef14203          	lbu	tp,-17(sp)
+    1624:	fe410223          	sb	tp,-28(sp)
+    1628:	fe412203          	lw	tp,-28(sp)
+    162c:	00460233          	add	tp,a2,tp
+    1630:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1634:	fe4105a3          	sb	tp,-21(sp)
+    1638:	ff214203          	lbu	tp,-14(sp)
+    163c:	fe4102a3          	sb	tp,-27(sp)
+    1640:	fee14203          	lbu	tp,-18(sp)
+    1644:	fe410223          	sb	tp,-28(sp)
+    1648:	fe412203          	lw	tp,-28(sp)
+    164c:	00460233          	add	tp,a2,tp
+    1650:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1654:	fe410523          	sb	tp,-22(sp)
+    1658:	ff114203          	lbu	tp,-15(sp)
+    165c:	fe4102a3          	sb	tp,-27(sp)
+    1660:	fed14203          	lbu	tp,-19(sp)
+    1664:	fe410223          	sb	tp,-28(sp)
+    1668:	fe412203          	lw	tp,-28(sp)
+    166c:	00460233          	add	tp,a2,tp
+    1670:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1674:	fe4104a3          	sb	tp,-23(sp)
+    1678:	ff014203          	lbu	tp,-16(sp)
+    167c:	fe4102a3          	sb	tp,-27(sp)
+    1680:	fec14203          	lbu	tp,-20(sp)
+    1684:	fe410223          	sb	tp,-28(sp)
+    1688:	fe412203          	lw	tp,-28(sp)
+    168c:	00460233          	add	tp,a2,tp
+    1690:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1694:	fe410423          	sb	tp,-24(sp)
+    1698:	fe812603          	lw	a2,-24(sp)
+    169c:	00028793          	addi	a5,t0,0
+
+000016a0 <beq_572.L67>:
+    16a0:	fee12823          	sw	a4,-16(sp)
+    16a4:	fe812e23          	sw	s0,-4(sp)
+    16a8:	00003437          	lui	s0,0x3
+    16ac:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+    16b0:	ff014183          	lbu	gp,-16(sp)
+    16b4:	003401b3          	add	gp,s0,gp
+    16b8:	0001c183          	lbu	gp,0(gp)
+    16bc:	ff114203          	lbu	tp,-15(sp)
+    16c0:	00440233          	add	tp,s0,tp
+    16c4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    16c8:	004181b3          	add	gp,gp,tp
+    16cc:	ff214203          	lbu	tp,-14(sp)
+    16d0:	00440233          	add	tp,s0,tp
+    16d4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    16d8:	004181b3          	add	gp,gp,tp
+    16dc:	ff314203          	lbu	tp,-13(sp)
+    16e0:	00440233          	add	tp,s0,tp
+    16e4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    16e8:	004181b3          	add	gp,gp,tp
+    16ec:	00003237          	lui	tp,0x3
+    16f0:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    16f4:	00320233          	add	tp,tp,gp
+    16f8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    16fc:	ffc12403          	lw	s0,-4(sp)
+
+00001700 <slli_581>:
+    1700:	00420233          	add	tp,tp,tp
+    1704:	00420233          	add	tp,tp,tp
+    1708:	00410233          	add	tp,sp,tp
+    170c:	000021b7          	lui	gp,0x2
+    1710:	97818193          	addi	gp,gp,-1672 # 1978 <beq_612.L95>
+    1714:	fe312823          	sw	gp,-16(sp)
+    1718:	000011b7          	lui	gp,0x1
+    171c:	72c18193          	addi	gp,gp,1836 # 172c <non_taken_572.L67>
+    1720:	fe312623          	sw	gp,-20(sp)
+    1724:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    1728:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+0000172c <non_taken_572.L67>:
+    172c:	ff860693          	addi	a3,a2,-8
+
+00001730 <andi_584>:
+    1730:	ff800213          	addi	tp,zero,-8
+
+00001734 <and_585>:
+    1734:	fed12823          	sw	a3,-16(sp)
+    1738:	fe412623          	sw	tp,-20(sp)
+    173c:	000036b7          	lui	a3,0x3
+    1740:	a0068693          	addi	a3,a3,-1536 # 2a00 <_logic_shift_table>
+    1744:	fe012223          	sw	zero,-28(sp)
+    1748:	ff314203          	lbu	tp,-13(sp)
+    174c:	fe4102a3          	sb	tp,-27(sp)
+    1750:	fef14203          	lbu	tp,-17(sp)
+    1754:	fe410223          	sb	tp,-28(sp)
+    1758:	fe412203          	lw	tp,-28(sp)
+    175c:	00468233          	add	tp,a3,tp
+    1760:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1764:	fe4105a3          	sb	tp,-21(sp)
+    1768:	ff214203          	lbu	tp,-14(sp)
+    176c:	fe4102a3          	sb	tp,-27(sp)
+    1770:	fee14203          	lbu	tp,-18(sp)
+    1774:	fe410223          	sb	tp,-28(sp)
+    1778:	fe412203          	lw	tp,-28(sp)
+    177c:	00468233          	add	tp,a3,tp
+    1780:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1784:	fe410523          	sb	tp,-22(sp)
+    1788:	ff114203          	lbu	tp,-15(sp)
+    178c:	fe4102a3          	sb	tp,-27(sp)
+    1790:	fed14203          	lbu	tp,-19(sp)
+    1794:	fe410223          	sb	tp,-28(sp)
+    1798:	fe412203          	lw	tp,-28(sp)
+    179c:	00468233          	add	tp,a3,tp
+    17a0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    17a4:	fe4104a3          	sb	tp,-23(sp)
+    17a8:	ff014203          	lbu	tp,-16(sp)
+    17ac:	fe4102a3          	sb	tp,-27(sp)
+    17b0:	fec14203          	lbu	tp,-20(sp)
+    17b4:	fe410223          	sb	tp,-28(sp)
+    17b8:	fe412203          	lw	tp,-28(sp)
+    17bc:	00468233          	add	tp,a3,tp
+    17c0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    17c4:	fe410423          	sb	tp,-24(sp)
+    17c8:	fe812683          	lw	a3,-24(sp)
+    17cc:	00868693          	addi	a3,a3,8
+    17d0:	00d287b3          	add	a5,t0,a3
+    17d4:	00058713          	addi	a4,a1,0
+    17d8:	00072303          	lw	t1,0(a4)
+    17dc:	00472383          	lw	t2,4(a4)
+    17e0:	00828293          	addi	t0,t0,8
+    17e4:	fe62ac23          	sw	t1,-8(t0)
+    17e8:	fe72ae23          	sw	t2,-4(t0)
+    17ec:	00870713          	addi	a4,a4,8
+
+000017f0 <bne_592.L74>:
+    17f0:	fef12823          	sw	a5,-16(sp)
+    17f4:	fe512623          	sw	t0,-20(sp)
+    17f8:	fe812e23          	sw	s0,-4(sp)
+    17fc:	fe912c23          	sw	s1,-8(sp)
+    1800:	00002437          	lui	s0,0x2
+    1804:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+    1808:	ff014183          	lbu	gp,-16(sp)
+    180c:	00340233          	add	tp,s0,gp
+    1810:	00100193          	addi	gp,zero,1
+    1814:	00320023          	sb	gp,0(tp) # 0 <_start>
+    1818:	fec14183          	lbu	gp,-20(sp)
+    181c:	003401b3          	add	gp,s0,gp
+    1820:	00018023          	sb	zero,0(gp)
+    1824:	00024183          	lbu	gp,0(tp) # 0 <_start>
+    1828:	ff114483          	lbu	s1,-15(sp)
+    182c:	00940233          	add	tp,s0,s1
+    1830:	00100493          	addi	s1,zero,1
+    1834:	00920023          	sb	s1,0(tp) # 0 <_start>
+    1838:	fed14483          	lbu	s1,-19(sp)
+    183c:	009404b3          	add	s1,s0,s1
+    1840:	00048023          	sb	zero,0(s1)
+    1844:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    1848:	009181b3          	add	gp,gp,s1
+    184c:	ff214483          	lbu	s1,-14(sp)
+    1850:	00940233          	add	tp,s0,s1
+    1854:	00100493          	addi	s1,zero,1
+    1858:	00920023          	sb	s1,0(tp) # 0 <_start>
+    185c:	fee14483          	lbu	s1,-18(sp)
+    1860:	009404b3          	add	s1,s0,s1
+    1864:	00048023          	sb	zero,0(s1)
+    1868:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    186c:	009181b3          	add	gp,gp,s1
+    1870:	ff314483          	lbu	s1,-13(sp)
+    1874:	00940233          	add	tp,s0,s1
+    1878:	00100493          	addi	s1,zero,1
+    187c:	00920023          	sb	s1,0(tp) # 0 <_start>
+    1880:	fef14483          	lbu	s1,-17(sp)
+    1884:	009404b3          	add	s1,s0,s1
+    1888:	00048023          	sb	zero,0(s1)
+    188c:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    1890:	009181b3          	add	gp,gp,s1
+    1894:	00003237          	lui	tp,0x3
+    1898:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    189c:	00320233          	add	tp,tp,gp
+    18a0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    18a4:	ff812483          	lw	s1,-8(sp)
+    18a8:	ffc12403          	lw	s0,-4(sp)
+
+000018ac <slli_601>:
+    18ac:	00420233          	add	tp,tp,tp
+    18b0:	00420233          	add	tp,tp,tp
+    18b4:	00410233          	add	tp,sp,tp
+    18b8:	000021b7          	lui	gp,0x2
+    18bc:	8d818193          	addi	gp,gp,-1832 # 18d8 <andi_604>
+    18c0:	fe312823          	sw	gp,-16(sp)
+    18c4:	000011b7          	lui	gp,0x1
+    18c8:	7d818193          	addi	gp,gp,2008 # 17d8 <and_585+0xa4>
+    18cc:	fe312623          	sw	gp,-20(sp)
+    18d0:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    18d4:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+000018d8 <andi_604>:
+    18d8:	00700213          	addi	tp,zero,7
+
+000018dc <and_605>:
+    18dc:	fec12823          	sw	a2,-16(sp)
+    18e0:	fe412623          	sw	tp,-20(sp)
+    18e4:	00003637          	lui	a2,0x3
+    18e8:	a0060613          	addi	a2,a2,-1536 # 2a00 <_logic_shift_table>
+    18ec:	fe012223          	sw	zero,-28(sp)
+    18f0:	ff314203          	lbu	tp,-13(sp)
+    18f4:	fe4102a3          	sb	tp,-27(sp)
+    18f8:	fef14203          	lbu	tp,-17(sp)
+    18fc:	fe410223          	sb	tp,-28(sp)
+    1900:	fe412203          	lw	tp,-28(sp)
+    1904:	00460233          	add	tp,a2,tp
+    1908:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    190c:	fe4105a3          	sb	tp,-21(sp)
+    1910:	ff214203          	lbu	tp,-14(sp)
+    1914:	fe4102a3          	sb	tp,-27(sp)
+    1918:	fee14203          	lbu	tp,-18(sp)
+    191c:	fe410223          	sb	tp,-28(sp)
+    1920:	fe412203          	lw	tp,-28(sp)
+    1924:	00460233          	add	tp,a2,tp
+    1928:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    192c:	fe410523          	sb	tp,-22(sp)
+    1930:	ff114203          	lbu	tp,-15(sp)
+    1934:	fe4102a3          	sb	tp,-27(sp)
+    1938:	fed14203          	lbu	tp,-19(sp)
+    193c:	fe410223          	sb	tp,-28(sp)
+    1940:	fe412203          	lw	tp,-28(sp)
+    1944:	00460233          	add	tp,a2,tp
+    1948:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    194c:	fe4104a3          	sb	tp,-23(sp)
+    1950:	ff014203          	lbu	tp,-16(sp)
+    1954:	fe4102a3          	sb	tp,-27(sp)
+    1958:	fec14203          	lbu	tp,-20(sp)
+    195c:	fe410223          	sb	tp,-28(sp)
+    1960:	fe412203          	lw	tp,-28(sp)
+    1964:	00460233          	add	tp,a2,tp
+    1968:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    196c:	fe410423          	sb	tp,-24(sp)
+    1970:	fe812603          	lw	a2,-24(sp)
+    1974:	00d585b3          	add	a1,a1,a3
+
+00001978 <beq_612.L95>:
+    1978:	fec12823          	sw	a2,-16(sp)
+    197c:	fe812e23          	sw	s0,-4(sp)
+    1980:	00003437          	lui	s0,0x3
+    1984:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+    1988:	ff014183          	lbu	gp,-16(sp)
+    198c:	003401b3          	add	gp,s0,gp
+    1990:	0001c183          	lbu	gp,0(gp)
+    1994:	ff114203          	lbu	tp,-15(sp)
+    1998:	00440233          	add	tp,s0,tp
+    199c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    19a0:	004181b3          	add	gp,gp,tp
+    19a4:	ff214203          	lbu	tp,-14(sp)
+    19a8:	00440233          	add	tp,s0,tp
+    19ac:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    19b0:	004181b3          	add	gp,gp,tp
+    19b4:	ff314203          	lbu	tp,-13(sp)
+    19b8:	00440233          	add	tp,s0,tp
+    19bc:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    19c0:	004181b3          	add	gp,gp,tp
+    19c4:	00003237          	lui	tp,0x3
+    19c8:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    19cc:	00320233          	add	tp,tp,gp
+    19d0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    19d4:	ffc12403          	lw	s0,-4(sp)
+
+000019d8 <slli_621>:
+    19d8:	00420233          	add	tp,tp,tp
+    19dc:	00420233          	add	tp,tp,tp
+    19e0:	00410233          	add	tp,sp,tp
+    19e4:	000021b7          	lui	gp,0x2
+    19e8:	67018193          	addi	gp,gp,1648 # 2670 <non_taken_795.L70+0x1c>
+    19ec:	fe312823          	sw	gp,-16(sp)
+    19f0:	000021b7          	lui	gp,0x2
+    19f4:	a0418193          	addi	gp,gp,-1532 # 1a04 <non_taken_612.L95>
+    19f8:	fe312623          	sw	gp,-20(sp)
+    19fc:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    1a00:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00001a04 <non_taken_612.L95>:
+    1a04:	00c58633          	add	a2,a1,a2
+    1a08:	0005c703          	lbu	a4,0(a1)
+    1a0c:	00158593          	addi	a1,a1,1
+    1a10:	00178793          	addi	a5,a5,1
+    1a14:	fee78fa3          	sb	a4,-1(a5)
+
+00001a18 <bne_624.L80>:
+    1a18:	fec12823          	sw	a2,-16(sp)
+    1a1c:	feb12623          	sw	a1,-20(sp)
+    1a20:	fe812e23          	sw	s0,-4(sp)
+    1a24:	fe912c23          	sw	s1,-8(sp)
+    1a28:	00002437          	lui	s0,0x2
+    1a2c:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+    1a30:	ff014183          	lbu	gp,-16(sp)
+    1a34:	00340233          	add	tp,s0,gp
+    1a38:	00100193          	addi	gp,zero,1
+    1a3c:	00320023          	sb	gp,0(tp) # 0 <_start>
+    1a40:	fec14183          	lbu	gp,-20(sp)
+    1a44:	003401b3          	add	gp,s0,gp
+    1a48:	00018023          	sb	zero,0(gp)
+    1a4c:	00024183          	lbu	gp,0(tp) # 0 <_start>
+    1a50:	ff114483          	lbu	s1,-15(sp)
+    1a54:	00940233          	add	tp,s0,s1
+    1a58:	00100493          	addi	s1,zero,1
+    1a5c:	00920023          	sb	s1,0(tp) # 0 <_start>
+    1a60:	fed14483          	lbu	s1,-19(sp)
+    1a64:	009404b3          	add	s1,s0,s1
+    1a68:	00048023          	sb	zero,0(s1)
+    1a6c:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    1a70:	009181b3          	add	gp,gp,s1
+    1a74:	ff214483          	lbu	s1,-14(sp)
+    1a78:	00940233          	add	tp,s0,s1
+    1a7c:	00100493          	addi	s1,zero,1
+    1a80:	00920023          	sb	s1,0(tp) # 0 <_start>
+    1a84:	fee14483          	lbu	s1,-18(sp)
+    1a88:	009404b3          	add	s1,s0,s1
+    1a8c:	00048023          	sb	zero,0(s1)
+    1a90:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    1a94:	009181b3          	add	gp,gp,s1
+    1a98:	ff314483          	lbu	s1,-13(sp)
+    1a9c:	00940233          	add	tp,s0,s1
+    1aa0:	00100493          	addi	s1,zero,1
+    1aa4:	00920023          	sb	s1,0(tp) # 0 <_start>
+    1aa8:	fef14483          	lbu	s1,-17(sp)
+    1aac:	009404b3          	add	s1,s0,s1
+    1ab0:	00048023          	sb	zero,0(s1)
+    1ab4:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    1ab8:	009181b3          	add	gp,gp,s1
+    1abc:	00003237          	lui	tp,0x3
+    1ac0:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    1ac4:	00320233          	add	tp,tp,gp
+    1ac8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1acc:	ff812483          	lw	s1,-8(sp)
+    1ad0:	ffc12403          	lw	s0,-4(sp)
+
+00001ad4 <slli_633>:
+    1ad4:	00420233          	add	tp,tp,tp
+    1ad8:	00420233          	add	tp,tp,tp
+    1adc:	00410233          	add	tp,sp,tp
+    1ae0:	000021b7          	lui	gp,0x2
+    1ae4:	b0018193          	addi	gp,gp,-1280 # 1b00 <non_taken_624.L80>
+    1ae8:	fe312823          	sw	gp,-16(sp)
+    1aec:	000021b7          	lui	gp,0x2
+    1af0:	a0818193          	addi	gp,gp,-1528 # 1a08 <non_taken_612.L95+0x4>
+    1af4:	fe312623          	sw	gp,-20(sp)
+    1af8:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    1afc:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00001b00 <non_taken_624.L80>:
+    1b00:	00008067          	jalr	zero,0(ra)
+
+00001b04 <andi_636>:
+    1b04:	00300213          	addi	tp,zero,3
+
+00001b08 <and_637>:
+    1b08:	fef12823          	sw	a5,-16(sp)
+    1b0c:	fe412623          	sw	tp,-20(sp)
+    1b10:	000037b7          	lui	a5,0x3
+    1b14:	a0078793          	addi	a5,a5,-1536 # 2a00 <_logic_shift_table>
+    1b18:	fe012223          	sw	zero,-28(sp)
+    1b1c:	ff314203          	lbu	tp,-13(sp)
+    1b20:	fe4102a3          	sb	tp,-27(sp)
+    1b24:	fef14203          	lbu	tp,-17(sp)
+    1b28:	fe410223          	sb	tp,-28(sp)
+    1b2c:	fe412203          	lw	tp,-28(sp)
+    1b30:	00478233          	add	tp,a5,tp
+    1b34:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1b38:	fe4105a3          	sb	tp,-21(sp)
+    1b3c:	ff214203          	lbu	tp,-14(sp)
+    1b40:	fe4102a3          	sb	tp,-27(sp)
+    1b44:	fee14203          	lbu	tp,-18(sp)
+    1b48:	fe410223          	sb	tp,-28(sp)
+    1b4c:	fe412203          	lw	tp,-28(sp)
+    1b50:	00478233          	add	tp,a5,tp
+    1b54:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1b58:	fe410523          	sb	tp,-22(sp)
+    1b5c:	ff114203          	lbu	tp,-15(sp)
+    1b60:	fe4102a3          	sb	tp,-27(sp)
+    1b64:	fed14203          	lbu	tp,-19(sp)
+    1b68:	fe410223          	sb	tp,-28(sp)
+    1b6c:	fe412203          	lw	tp,-28(sp)
+    1b70:	00478233          	add	tp,a5,tp
+    1b74:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1b78:	fe4104a3          	sb	tp,-23(sp)
+    1b7c:	ff014203          	lbu	tp,-16(sp)
+    1b80:	fe4102a3          	sb	tp,-27(sp)
+    1b84:	fec14203          	lbu	tp,-20(sp)
+    1b88:	fe410223          	sb	tp,-28(sp)
+    1b8c:	fe412203          	lw	tp,-28(sp)
+    1b90:	00478233          	add	tp,a5,tp
+    1b94:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1b98:	fe410423          	sb	tp,-24(sp)
+    1b9c:	fe812783          	lw	a5,-24(sp)
+
+00001ba0 <bne_644.L96>:
+    1ba0:	fef12823          	sw	a5,-16(sp)
+    1ba4:	fe812e23          	sw	s0,-4(sp)
+    1ba8:	00003437          	lui	s0,0x3
+    1bac:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+    1bb0:	ff014183          	lbu	gp,-16(sp)
+    1bb4:	003401b3          	add	gp,s0,gp
+    1bb8:	0001c183          	lbu	gp,0(gp)
+    1bbc:	ff114203          	lbu	tp,-15(sp)
+    1bc0:	00440233          	add	tp,s0,tp
+    1bc4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1bc8:	004181b3          	add	gp,gp,tp
+    1bcc:	ff214203          	lbu	tp,-14(sp)
+    1bd0:	00440233          	add	tp,s0,tp
+    1bd4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1bd8:	004181b3          	add	gp,gp,tp
+    1bdc:	ff314203          	lbu	tp,-13(sp)
+    1be0:	00440233          	add	tp,s0,tp
+    1be4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1be8:	004181b3          	add	gp,gp,tp
+    1bec:	00003237          	lui	tp,0x3
+    1bf0:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    1bf4:	00320233          	add	tp,tp,gp
+    1bf8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1bfc:	ffc12403          	lw	s0,-4(sp)
+
+00001c00 <slli_653>:
+    1c00:	00420233          	add	tp,tp,tp
+    1c04:	00420233          	add	tp,tp,tp
+    1c08:	00410233          	add	tp,sp,tp
+    1c0c:	000021b7          	lui	gp,0x2
+    1c10:	c2c18193          	addi	gp,gp,-980 # 1c2c <andi_656>
+    1c14:	fe312823          	sw	gp,-16(sp)
+    1c18:	000021b7          	lui	gp,0x2
+    1c1c:	66018193          	addi	gp,gp,1632 # 2660 <non_taken_795.L70+0xc>
+    1c20:	fe312623          	sw	gp,-20(sp)
+    1c24:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    1c28:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00001c2c <andi_656>:
+    1c2c:	00300213          	addi	tp,zero,3
+
+00001c30 <and_657>:
+    1c30:	fea12823          	sw	a0,-16(sp)
+    1c34:	fe412623          	sw	tp,-20(sp)
+    1c38:	000037b7          	lui	a5,0x3
+    1c3c:	a0078793          	addi	a5,a5,-1536 # 2a00 <_logic_shift_table>
+    1c40:	fe012223          	sw	zero,-28(sp)
+    1c44:	ff314203          	lbu	tp,-13(sp)
+    1c48:	fe4102a3          	sb	tp,-27(sp)
+    1c4c:	fef14203          	lbu	tp,-17(sp)
+    1c50:	fe410223          	sb	tp,-28(sp)
+    1c54:	fe412203          	lw	tp,-28(sp)
+    1c58:	00478233          	add	tp,a5,tp
+    1c5c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1c60:	fe4105a3          	sb	tp,-21(sp)
+    1c64:	ff214203          	lbu	tp,-14(sp)
+    1c68:	fe4102a3          	sb	tp,-27(sp)
+    1c6c:	fee14203          	lbu	tp,-18(sp)
+    1c70:	fe410223          	sb	tp,-28(sp)
+    1c74:	fe412203          	lw	tp,-28(sp)
+    1c78:	00478233          	add	tp,a5,tp
+    1c7c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1c80:	fe410523          	sb	tp,-22(sp)
+    1c84:	ff114203          	lbu	tp,-15(sp)
+    1c88:	fe4102a3          	sb	tp,-27(sp)
+    1c8c:	fed14203          	lbu	tp,-19(sp)
+    1c90:	fe410223          	sb	tp,-28(sp)
+    1c94:	fe412203          	lw	tp,-28(sp)
+    1c98:	00478233          	add	tp,a5,tp
+    1c9c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1ca0:	fe4104a3          	sb	tp,-23(sp)
+    1ca4:	ff014203          	lbu	tp,-16(sp)
+    1ca8:	fe4102a3          	sb	tp,-27(sp)
+    1cac:	fec14203          	lbu	tp,-20(sp)
+    1cb0:	fe410223          	sb	tp,-28(sp)
+    1cb4:	fe412203          	lw	tp,-28(sp)
+    1cb8:	00478233          	add	tp,a5,tp
+    1cbc:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1cc0:	fe410423          	sb	tp,-24(sp)
+    1cc4:	fe812783          	lw	a5,-24(sp)
+    1cc8:	00400293          	addi	t0,zero,4
+    1ccc:	ffc60613          	addi	a2,a2,-4
+
+00001cd0 <sub_664>:
+    1cd0:	fe312a23          	sw	gp,-12(sp)
+    1cd4:	fef12423          	sw	a5,-24(sp)
+    1cd8:	00033237          	lui	tp,0x33
+    1cdc:	90020213          	addi	tp,tp,-1792 # 32900 <_logic_shift_table+0x2ff00>
+    1ce0:	feb14183          	lbu	gp,-21(sp)
+    1ce4:	004181b3          	add	gp,gp,tp
+    1ce8:	0001c183          	lbu	gp,0(gp)
+    1cec:	fe3103a3          	sb	gp,-25(sp)
+    1cf0:	fea14183          	lbu	gp,-22(sp)
+    1cf4:	004181b3          	add	gp,gp,tp
+    1cf8:	0001c183          	lbu	gp,0(gp)
+    1cfc:	fe310323          	sb	gp,-26(sp)
+    1d00:	fe914183          	lbu	gp,-23(sp)
+    1d04:	004181b3          	add	gp,gp,tp
+    1d08:	0001c183          	lbu	gp,0(gp)
+    1d0c:	fe3102a3          	sb	gp,-27(sp)
+    1d10:	fe814183          	lbu	gp,-24(sp)
+    1d14:	004181b3          	add	gp,gp,tp
+    1d18:	0001c183          	lbu	gp,0(gp)
+    1d1c:	fe310223          	sb	gp,-28(sp)
+    1d20:	ff412183          	lw	gp,-12(sp)
+    1d24:	fe412203          	lw	tp,-28(sp)
+    1d28:	004282b3          	add	t0,t0,tp
+    1d2c:	00128293          	addi	t0,t0,1
+    1d30:	00f60633          	add	a2,a2,a5
+    1d34:	00058713          	addi	a4,a1,0
+    1d38:	005507b3          	add	a5,a0,t0
+    1d3c:	00050693          	addi	a3,a0,0
+    1d40:	00074303          	lbu	t1,0(a4)
+    1d44:	00168693          	addi	a3,a3,1
+    1d48:	00170713          	addi	a4,a4,1
+    1d4c:	fe668fa3          	sb	t1,-1(a3)
+
+00001d50 <bne_667.L76>:
+    1d50:	fed12823          	sw	a3,-16(sp)
+    1d54:	fef12623          	sw	a5,-20(sp)
+    1d58:	fe812e23          	sw	s0,-4(sp)
+    1d5c:	fe912c23          	sw	s1,-8(sp)
+    1d60:	00002437          	lui	s0,0x2
+    1d64:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+    1d68:	ff014183          	lbu	gp,-16(sp)
+    1d6c:	00340233          	add	tp,s0,gp
+    1d70:	00100193          	addi	gp,zero,1
+    1d74:	00320023          	sb	gp,0(tp) # 0 <_start>
+    1d78:	fec14183          	lbu	gp,-20(sp)
+    1d7c:	003401b3          	add	gp,s0,gp
+    1d80:	00018023          	sb	zero,0(gp)
+    1d84:	00024183          	lbu	gp,0(tp) # 0 <_start>
+    1d88:	ff114483          	lbu	s1,-15(sp)
+    1d8c:	00940233          	add	tp,s0,s1
+    1d90:	00100493          	addi	s1,zero,1
+    1d94:	00920023          	sb	s1,0(tp) # 0 <_start>
+    1d98:	fed14483          	lbu	s1,-19(sp)
+    1d9c:	009404b3          	add	s1,s0,s1
+    1da0:	00048023          	sb	zero,0(s1)
+    1da4:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    1da8:	009181b3          	add	gp,gp,s1
+    1dac:	ff214483          	lbu	s1,-14(sp)
+    1db0:	00940233          	add	tp,s0,s1
+    1db4:	00100493          	addi	s1,zero,1
+    1db8:	00920023          	sb	s1,0(tp) # 0 <_start>
+    1dbc:	fee14483          	lbu	s1,-18(sp)
+    1dc0:	009404b3          	add	s1,s0,s1
+    1dc4:	00048023          	sb	zero,0(s1)
+    1dc8:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    1dcc:	009181b3          	add	gp,gp,s1
+    1dd0:	ff314483          	lbu	s1,-13(sp)
+    1dd4:	00940233          	add	tp,s0,s1
+    1dd8:	00100493          	addi	s1,zero,1
+    1ddc:	00920023          	sb	s1,0(tp) # 0 <_start>
+    1de0:	fef14483          	lbu	s1,-17(sp)
+    1de4:	009404b3          	add	s1,s0,s1
+    1de8:	00048023          	sb	zero,0(s1)
+    1dec:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    1df0:	009181b3          	add	gp,gp,s1
+    1df4:	00003237          	lui	tp,0x3
+    1df8:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    1dfc:	00320233          	add	tp,tp,gp
+    1e00:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1e04:	ff812483          	lw	s1,-8(sp)
+    1e08:	ffc12403          	lw	s0,-4(sp)
+
+00001e0c <slli_676>:
+    1e0c:	00420233          	add	tp,tp,tp
+    1e10:	00420233          	add	tp,tp,tp
+    1e14:	00410233          	add	tp,sp,tp
+    1e18:	000021b7          	lui	gp,0x2
+    1e1c:	e3818193          	addi	gp,gp,-456 # 1e38 <non_taken_667.L76>
+    1e20:	fe312823          	sw	gp,-16(sp)
+    1e24:	000021b7          	lui	gp,0x2
+    1e28:	d4018193          	addi	gp,gp,-704 # 1d40 <sub_664+0x70>
+    1e2c:	fe312623          	sw	gp,-20(sp)
+    1e30:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    1e34:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00001e38 <non_taken_667.L76>:
+    1e38:	01f00713          	addi	a4,zero,31
+    1e3c:	005585b3          	add	a1,a1,t0
+
+00001e40 <bgeu_680.L77>:
+    1e40:	fe812e23          	sw	s0,-4(sp)
+    1e44:	fe912c23          	sw	s1,-8(sp)
+    1e48:	fec12823          	sw	a2,-16(sp)
+    1e4c:	00070413          	addi	s0,a4,0
+    1e50:	ff012483          	lw	s1,-16(sp)
+    1e54:	fe812423          	sw	s0,-24(sp)
+    1e58:	feb14183          	lbu	gp,-21(sp)
+
+00001e5c <slli_685>:
+    1e5c:	003181b3          	add	gp,gp,gp
+    1e60:	fe312423          	sw	gp,-24(sp)
+    1e64:	fe914183          	lbu	gp,-23(sp)
+
+00001e68 <slli_687>:
+    1e68:	003181b3          	add	gp,gp,gp
+    1e6c:	fe912423          	sw	s1,-24(sp)
+    1e70:	feb14203          	lbu	tp,-21(sp)
+
+00001e74 <slli_690>:
+    1e74:	00420233          	add	tp,tp,tp
+    1e78:	fe412423          	sw	tp,-24(sp)
+    1e7c:	fe914203          	lbu	tp,-23(sp)
+    1e80:	004181b3          	add	gp,gp,tp
+
+00001e84 <slli_692>:
+    1e84:	003181b3          	add	gp,gp,gp
+
+00001e88 <sub_693>:
+    1e88:	fe312a23          	sw	gp,-12(sp)
+    1e8c:	fe912423          	sw	s1,-24(sp)
+    1e90:	00033237          	lui	tp,0x33
+    1e94:	90020213          	addi	tp,tp,-1792 # 32900 <_logic_shift_table+0x2ff00>
+    1e98:	feb14183          	lbu	gp,-21(sp)
+    1e9c:	004181b3          	add	gp,gp,tp
+    1ea0:	0001c183          	lbu	gp,0(gp)
+    1ea4:	fe3103a3          	sb	gp,-25(sp)
+    1ea8:	fea14183          	lbu	gp,-22(sp)
+    1eac:	004181b3          	add	gp,gp,tp
+    1eb0:	0001c183          	lbu	gp,0(gp)
+    1eb4:	fe310323          	sb	gp,-26(sp)
+    1eb8:	fe914183          	lbu	gp,-23(sp)
+    1ebc:	004181b3          	add	gp,gp,tp
+    1ec0:	0001c183          	lbu	gp,0(gp)
+    1ec4:	fe3102a3          	sb	gp,-27(sp)
+    1ec8:	fe814183          	lbu	gp,-24(sp)
+    1ecc:	004181b3          	add	gp,gp,tp
+    1ed0:	0001c183          	lbu	gp,0(gp)
+    1ed4:	fe310223          	sb	gp,-28(sp)
+    1ed8:	ff412183          	lw	gp,-12(sp)
+    1edc:	fe412203          	lw	tp,-28(sp)
+    1ee0:	00440233          	add	tp,s0,tp
+    1ee4:	00120213          	addi	tp,tp,1 # 1 <_start+0x1>
+    1ee8:	fe412423          	sw	tp,-24(sp)
+    1eec:	feb14203          	lbu	tp,-21(sp)
+
+00001ef0 <slli_698>:
+    1ef0:	00420233          	add	tp,tp,tp
+    1ef4:	fe412423          	sw	tp,-24(sp)
+    1ef8:	fe914203          	lbu	tp,-23(sp)
+    1efc:	004181b3          	add	gp,gp,tp
+    1f00:	00003237          	lui	tp,0x3
+    1f04:	91020213          	addi	tp,tp,-1776 # 2910 <_sltu1_table>
+    1f08:	00320233          	add	tp,tp,gp
+    1f0c:	ff812483          	lw	s1,-8(sp)
+    1f10:	ffc12403          	lw	s0,-4(sp)
+    1f14:	00024203          	lbu	tp,0(tp) # 0 <_start>
+
+00001f18 <slli_702>:
+    1f18:	00420233          	add	tp,tp,tp
+    1f1c:	00420233          	add	tp,tp,tp
+    1f20:	00410233          	add	tp,sp,tp
+    1f24:	000021b7          	lui	gp,0x2
+    1f28:	f4418193          	addi	gp,gp,-188 # 1f44 <non_taken_680.L77>
+    1f2c:	fe312823          	sw	gp,-16(sp)
+    1f30:	000021b7          	lui	gp,0x2
+    1f34:	2e818193          	addi	gp,gp,744 # 22e8 <non_taken_741.L67>
+    1f38:	fe312623          	sw	gp,-20(sp)
+    1f3c:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    1f40:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00001f44 <non_taken_680.L77>:
+    1f44:	fe060293          	addi	t0,a2,-32
+
+00001f48 <andi_705>:
+    1f48:	fe000213          	addi	tp,zero,-32
+
+00001f4c <and_706>:
+    1f4c:	fe512823          	sw	t0,-16(sp)
+    1f50:	fe412623          	sw	tp,-20(sp)
+    1f54:	000032b7          	lui	t0,0x3
+    1f58:	a0028293          	addi	t0,t0,-1536 # 2a00 <_logic_shift_table>
+    1f5c:	fe012223          	sw	zero,-28(sp)
+    1f60:	ff314203          	lbu	tp,-13(sp)
+    1f64:	fe4102a3          	sb	tp,-27(sp)
+    1f68:	fef14203          	lbu	tp,-17(sp)
+    1f6c:	fe410223          	sb	tp,-28(sp)
+    1f70:	fe412203          	lw	tp,-28(sp)
+    1f74:	00428233          	add	tp,t0,tp
+    1f78:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1f7c:	fe4105a3          	sb	tp,-21(sp)
+    1f80:	ff214203          	lbu	tp,-14(sp)
+    1f84:	fe4102a3          	sb	tp,-27(sp)
+    1f88:	fee14203          	lbu	tp,-18(sp)
+    1f8c:	fe410223          	sb	tp,-28(sp)
+    1f90:	fe412203          	lw	tp,-28(sp)
+    1f94:	00428233          	add	tp,t0,tp
+    1f98:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1f9c:	fe410523          	sb	tp,-22(sp)
+    1fa0:	ff114203          	lbu	tp,-15(sp)
+    1fa4:	fe4102a3          	sb	tp,-27(sp)
+    1fa8:	fed14203          	lbu	tp,-19(sp)
+    1fac:	fe410223          	sb	tp,-28(sp)
+    1fb0:	fe412203          	lw	tp,-28(sp)
+    1fb4:	00428233          	add	tp,t0,tp
+    1fb8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1fbc:	fe4104a3          	sb	tp,-23(sp)
+    1fc0:	ff014203          	lbu	tp,-16(sp)
+    1fc4:	fe4102a3          	sb	tp,-27(sp)
+    1fc8:	fec14203          	lbu	tp,-20(sp)
+    1fcc:	fe410223          	sb	tp,-28(sp)
+    1fd0:	fe412203          	lw	tp,-28(sp)
+    1fd4:	00428233          	add	tp,t0,tp
+    1fd8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    1fdc:	fe410423          	sb	tp,-24(sp)
+    1fe0:	fe812283          	lw	t0,-24(sp)
+    1fe4:	02028293          	addi	t0,t0,32
+    1fe8:	005786b3          	add	a3,a5,t0
+    1fec:	00058713          	addi	a4,a1,0
+    1ff0:	00072303          	lw	t1,0(a4)
+    1ff4:	02070713          	addi	a4,a4,32
+    1ff8:	02078793          	addi	a5,a5,32
+    1ffc:	fe67a023          	sw	t1,-32(a5)
+    2000:	fe472303          	lw	t1,-28(a4)
+    2004:	fe67a223          	sw	t1,-28(a5)
+    2008:	fe872303          	lw	t1,-24(a4)
+    200c:	fe67a423          	sw	t1,-24(a5)
+    2010:	fec72303          	lw	t1,-20(a4)
+    2014:	fe67a623          	sw	t1,-20(a5)
+    2018:	ff072303          	lw	t1,-16(a4)
+    201c:	fe67a823          	sw	t1,-16(a5)
+    2020:	ff472303          	lw	t1,-12(a4)
+    2024:	fe67aa23          	sw	t1,-12(a5)
+    2028:	ff872303          	lw	t1,-8(a4)
+    202c:	fe67ac23          	sw	t1,-8(a5)
+    2030:	ffc72303          	lw	t1,-4(a4)
+    2034:	fe67ae23          	sw	t1,-4(a5)
+
+00002038 <bne_713.L78>:
+    2038:	fef12823          	sw	a5,-16(sp)
+    203c:	fed12623          	sw	a3,-20(sp)
+    2040:	fe812e23          	sw	s0,-4(sp)
+    2044:	fe912c23          	sw	s1,-8(sp)
+    2048:	00002437          	lui	s0,0x2
+    204c:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+    2050:	ff014183          	lbu	gp,-16(sp)
+    2054:	00340233          	add	tp,s0,gp
+    2058:	00100193          	addi	gp,zero,1
+    205c:	00320023          	sb	gp,0(tp) # 0 <_start>
+    2060:	fec14183          	lbu	gp,-20(sp)
+    2064:	003401b3          	add	gp,s0,gp
+    2068:	00018023          	sb	zero,0(gp)
+    206c:	00024183          	lbu	gp,0(tp) # 0 <_start>
+    2070:	ff114483          	lbu	s1,-15(sp)
+    2074:	00940233          	add	tp,s0,s1
+    2078:	00100493          	addi	s1,zero,1
+    207c:	00920023          	sb	s1,0(tp) # 0 <_start>
+    2080:	fed14483          	lbu	s1,-19(sp)
+    2084:	009404b3          	add	s1,s0,s1
+    2088:	00048023          	sb	zero,0(s1)
+    208c:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    2090:	009181b3          	add	gp,gp,s1
+    2094:	ff214483          	lbu	s1,-14(sp)
+    2098:	00940233          	add	tp,s0,s1
+    209c:	00100493          	addi	s1,zero,1
+    20a0:	00920023          	sb	s1,0(tp) # 0 <_start>
+    20a4:	fee14483          	lbu	s1,-18(sp)
+    20a8:	009404b3          	add	s1,s0,s1
+    20ac:	00048023          	sb	zero,0(s1)
+    20b0:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    20b4:	009181b3          	add	gp,gp,s1
+    20b8:	ff314483          	lbu	s1,-13(sp)
+    20bc:	00940233          	add	tp,s0,s1
+    20c0:	00100493          	addi	s1,zero,1
+    20c4:	00920023          	sb	s1,0(tp) # 0 <_start>
+    20c8:	fef14483          	lbu	s1,-17(sp)
+    20cc:	009404b3          	add	s1,s0,s1
+    20d0:	00048023          	sb	zero,0(s1)
+    20d4:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    20d8:	009181b3          	add	gp,gp,s1
+    20dc:	00003237          	lui	tp,0x3
+    20e0:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    20e4:	00320233          	add	tp,tp,gp
+    20e8:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    20ec:	ff812483          	lw	s1,-8(sp)
+    20f0:	ffc12403          	lw	s0,-4(sp)
+
+000020f4 <slli_722>:
+    20f4:	00420233          	add	tp,tp,tp
+    20f8:	00420233          	add	tp,tp,tp
+    20fc:	00410233          	add	tp,sp,tp
+    2100:	000021b7          	lui	gp,0x2
+    2104:	12018193          	addi	gp,gp,288 # 2120 <andi_725>
+    2108:	fe312823          	sw	gp,-16(sp)
+    210c:	000021b7          	lui	gp,0x2
+    2110:	ff018193          	addi	gp,gp,-16 # 1ff0 <and_706+0xa4>
+    2114:	fe312623          	sw	gp,-20(sp)
+    2118:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    211c:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00002120 <andi_725>:
+    2120:	01c00213          	addi	tp,zero,28
+
+00002124 <and_726>:
+    2124:	fec12823          	sw	a2,-16(sp)
+    2128:	fe412623          	sw	tp,-20(sp)
+    212c:	00003737          	lui	a4,0x3
+    2130:	a0070713          	addi	a4,a4,-1536 # 2a00 <_logic_shift_table>
+    2134:	fe012223          	sw	zero,-28(sp)
+    2138:	ff314203          	lbu	tp,-13(sp)
+    213c:	fe4102a3          	sb	tp,-27(sp)
+    2140:	fef14203          	lbu	tp,-17(sp)
+    2144:	fe410223          	sb	tp,-28(sp)
+    2148:	fe412203          	lw	tp,-28(sp)
+    214c:	00470233          	add	tp,a4,tp
+    2150:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2154:	fe4105a3          	sb	tp,-21(sp)
+    2158:	ff214203          	lbu	tp,-14(sp)
+    215c:	fe4102a3          	sb	tp,-27(sp)
+    2160:	fee14203          	lbu	tp,-18(sp)
+    2164:	fe410223          	sb	tp,-28(sp)
+    2168:	fe412203          	lw	tp,-28(sp)
+    216c:	00470233          	add	tp,a4,tp
+    2170:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2174:	fe410523          	sb	tp,-22(sp)
+    2178:	ff114203          	lbu	tp,-15(sp)
+    217c:	fe4102a3          	sb	tp,-27(sp)
+    2180:	fed14203          	lbu	tp,-19(sp)
+    2184:	fe410223          	sb	tp,-28(sp)
+    2188:	fe412203          	lw	tp,-28(sp)
+    218c:	00470233          	add	tp,a4,tp
+    2190:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2194:	fe4104a3          	sb	tp,-23(sp)
+    2198:	ff014203          	lbu	tp,-16(sp)
+    219c:	fe4102a3          	sb	tp,-27(sp)
+    21a0:	fec14203          	lbu	tp,-20(sp)
+    21a4:	fe410223          	sb	tp,-28(sp)
+    21a8:	fe412203          	lw	tp,-28(sp)
+    21ac:	00470233          	add	tp,a4,tp
+    21b0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    21b4:	fe410423          	sb	tp,-24(sp)
+    21b8:	fe812703          	lw	a4,-24(sp)
+    21bc:	005585b3          	add	a1,a1,t0
+
+000021c0 <andi_733>:
+    21c0:	01f00213          	addi	tp,zero,31
+
+000021c4 <and_734>:
+    21c4:	fec12823          	sw	a2,-16(sp)
+    21c8:	fe412623          	sw	tp,-20(sp)
+    21cc:	00003637          	lui	a2,0x3
+    21d0:	a0060613          	addi	a2,a2,-1536 # 2a00 <_logic_shift_table>
+    21d4:	fe012223          	sw	zero,-28(sp)
+    21d8:	ff314203          	lbu	tp,-13(sp)
+    21dc:	fe4102a3          	sb	tp,-27(sp)
+    21e0:	fef14203          	lbu	tp,-17(sp)
+    21e4:	fe410223          	sb	tp,-28(sp)
+    21e8:	fe412203          	lw	tp,-28(sp)
+    21ec:	00460233          	add	tp,a2,tp
+    21f0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    21f4:	fe4105a3          	sb	tp,-21(sp)
+    21f8:	ff214203          	lbu	tp,-14(sp)
+    21fc:	fe4102a3          	sb	tp,-27(sp)
+    2200:	fee14203          	lbu	tp,-18(sp)
+    2204:	fe410223          	sb	tp,-28(sp)
+    2208:	fe412203          	lw	tp,-28(sp)
+    220c:	00460233          	add	tp,a2,tp
+    2210:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2214:	fe410523          	sb	tp,-22(sp)
+    2218:	ff114203          	lbu	tp,-15(sp)
+    221c:	fe4102a3          	sb	tp,-27(sp)
+    2220:	fed14203          	lbu	tp,-19(sp)
+    2224:	fe410223          	sb	tp,-28(sp)
+    2228:	fe412203          	lw	tp,-28(sp)
+    222c:	00460233          	add	tp,a2,tp
+    2230:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2234:	fe4104a3          	sb	tp,-23(sp)
+    2238:	ff014203          	lbu	tp,-16(sp)
+    223c:	fe4102a3          	sb	tp,-27(sp)
+    2240:	fec14203          	lbu	tp,-20(sp)
+    2244:	fe410223          	sb	tp,-28(sp)
+    2248:	fe412203          	lw	tp,-28(sp)
+    224c:	00460233          	add	tp,a2,tp
+    2250:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2254:	fe410423          	sb	tp,-24(sp)
+    2258:	fe812603          	lw	a2,-24(sp)
+
+0000225c <beq_741.L67>:
+    225c:	fee12823          	sw	a4,-16(sp)
+    2260:	fe812e23          	sw	s0,-4(sp)
+    2264:	00003437          	lui	s0,0x3
+    2268:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+    226c:	ff014183          	lbu	gp,-16(sp)
+    2270:	003401b3          	add	gp,s0,gp
+    2274:	0001c183          	lbu	gp,0(gp)
+    2278:	ff114203          	lbu	tp,-15(sp)
+    227c:	00440233          	add	tp,s0,tp
+    2280:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2284:	004181b3          	add	gp,gp,tp
+    2288:	ff214203          	lbu	tp,-14(sp)
+    228c:	00440233          	add	tp,s0,tp
+    2290:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2294:	004181b3          	add	gp,gp,tp
+    2298:	ff314203          	lbu	tp,-13(sp)
+    229c:	00440233          	add	tp,s0,tp
+    22a0:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    22a4:	004181b3          	add	gp,gp,tp
+    22a8:	00003237          	lui	tp,0x3
+    22ac:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    22b0:	00320233          	add	tp,tp,gp
+    22b4:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    22b8:	ffc12403          	lw	s0,-4(sp)
+
+000022bc <slli_750>:
+    22bc:	00420233          	add	tp,tp,tp
+    22c0:	00420233          	add	tp,tp,tp
+    22c4:	00410233          	add	tp,sp,tp
+    22c8:	000021b7          	lui	gp,0x2
+    22cc:	97818193          	addi	gp,gp,-1672 # 1978 <beq_612.L95>
+    22d0:	fe312823          	sw	gp,-16(sp)
+    22d4:	000021b7          	lui	gp,0x2
+    22d8:	2e818193          	addi	gp,gp,744 # 22e8 <non_taken_741.L67>
+    22dc:	fe312623          	sw	gp,-20(sp)
+    22e0:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    22e4:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+000022e8 <non_taken_741.L67>:
+    22e8:	ffc60293          	addi	t0,a2,-4
+
+000022ec <andi_753>:
+    22ec:	ffc00213          	addi	tp,zero,-4
+
+000022f0 <and_754>:
+    22f0:	fe512823          	sw	t0,-16(sp)
+    22f4:	fe412623          	sw	tp,-20(sp)
+    22f8:	000032b7          	lui	t0,0x3
+    22fc:	a0028293          	addi	t0,t0,-1536 # 2a00 <_logic_shift_table>
+    2300:	fe012223          	sw	zero,-28(sp)
+    2304:	ff314203          	lbu	tp,-13(sp)
+    2308:	fe4102a3          	sb	tp,-27(sp)
+    230c:	fef14203          	lbu	tp,-17(sp)
+    2310:	fe410223          	sb	tp,-28(sp)
+    2314:	fe412203          	lw	tp,-28(sp)
+    2318:	00428233          	add	tp,t0,tp
+    231c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2320:	fe4105a3          	sb	tp,-21(sp)
+    2324:	ff214203          	lbu	tp,-14(sp)
+    2328:	fe4102a3          	sb	tp,-27(sp)
+    232c:	fee14203          	lbu	tp,-18(sp)
+    2330:	fe410223          	sb	tp,-28(sp)
+    2334:	fe412203          	lw	tp,-28(sp)
+    2338:	00428233          	add	tp,t0,tp
+    233c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2340:	fe410523          	sb	tp,-22(sp)
+    2344:	ff114203          	lbu	tp,-15(sp)
+    2348:	fe4102a3          	sb	tp,-27(sp)
+    234c:	fed14203          	lbu	tp,-19(sp)
+    2350:	fe410223          	sb	tp,-28(sp)
+    2354:	fe412203          	lw	tp,-28(sp)
+    2358:	00428233          	add	tp,t0,tp
+    235c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2360:	fe4104a3          	sb	tp,-23(sp)
+    2364:	ff014203          	lbu	tp,-16(sp)
+    2368:	fe4102a3          	sb	tp,-27(sp)
+    236c:	fec14203          	lbu	tp,-20(sp)
+    2370:	fe410223          	sb	tp,-28(sp)
+    2374:	fe412203          	lw	tp,-28(sp)
+    2378:	00428233          	add	tp,t0,tp
+    237c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2380:	fe410423          	sb	tp,-24(sp)
+    2384:	fe812283          	lw	t0,-24(sp)
+    2388:	00428293          	addi	t0,t0,4
+    238c:	005687b3          	add	a5,a3,t0
+    2390:	00058713          	addi	a4,a1,0
+    2394:	00072303          	lw	t1,0(a4)
+    2398:	00468693          	addi	a3,a3,4
+    239c:	00470713          	addi	a4,a4,4
+    23a0:	fe66ae23          	sw	t1,-4(a3)
+
+000023a4 <bne_761.L79>:
+    23a4:	fed12823          	sw	a3,-16(sp)
+    23a8:	fef12623          	sw	a5,-20(sp)
+    23ac:	fe812e23          	sw	s0,-4(sp)
+    23b0:	fe912c23          	sw	s1,-8(sp)
+    23b4:	00002437          	lui	s0,0x2
+    23b8:	70040413          	addi	s0,s0,1792 # 2700 <_check_same_array>
+    23bc:	ff014183          	lbu	gp,-16(sp)
+    23c0:	00340233          	add	tp,s0,gp
+    23c4:	00100193          	addi	gp,zero,1
+    23c8:	00320023          	sb	gp,0(tp) # 0 <_start>
+    23cc:	fec14183          	lbu	gp,-20(sp)
+    23d0:	003401b3          	add	gp,s0,gp
+    23d4:	00018023          	sb	zero,0(gp)
+    23d8:	00024183          	lbu	gp,0(tp) # 0 <_start>
+    23dc:	ff114483          	lbu	s1,-15(sp)
+    23e0:	00940233          	add	tp,s0,s1
+    23e4:	00100493          	addi	s1,zero,1
+    23e8:	00920023          	sb	s1,0(tp) # 0 <_start>
+    23ec:	fed14483          	lbu	s1,-19(sp)
+    23f0:	009404b3          	add	s1,s0,s1
+    23f4:	00048023          	sb	zero,0(s1)
+    23f8:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    23fc:	009181b3          	add	gp,gp,s1
+    2400:	ff214483          	lbu	s1,-14(sp)
+    2404:	00940233          	add	tp,s0,s1
+    2408:	00100493          	addi	s1,zero,1
+    240c:	00920023          	sb	s1,0(tp) # 0 <_start>
+    2410:	fee14483          	lbu	s1,-18(sp)
+    2414:	009404b3          	add	s1,s0,s1
+    2418:	00048023          	sb	zero,0(s1)
+    241c:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    2420:	009181b3          	add	gp,gp,s1
+    2424:	ff314483          	lbu	s1,-13(sp)
+    2428:	00940233          	add	tp,s0,s1
+    242c:	00100493          	addi	s1,zero,1
+    2430:	00920023          	sb	s1,0(tp) # 0 <_start>
+    2434:	fef14483          	lbu	s1,-17(sp)
+    2438:	009404b3          	add	s1,s0,s1
+    243c:	00048023          	sb	zero,0(s1)
+    2440:	00024483          	lbu	s1,0(tp) # 0 <_start>
+    2444:	009181b3          	add	gp,gp,s1
+    2448:	00003237          	lui	tp,0x3
+    244c:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    2450:	00320233          	add	tp,tp,gp
+    2454:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2458:	ff812483          	lw	s1,-8(sp)
+    245c:	ffc12403          	lw	s0,-4(sp)
+
+00002460 <slli_770>:
+    2460:	00420233          	add	tp,tp,tp
+    2464:	00420233          	add	tp,tp,tp
+    2468:	00410233          	add	tp,sp,tp
+    246c:	000021b7          	lui	gp,0x2
+    2470:	48c18193          	addi	gp,gp,1164 # 248c <andi_773>
+    2474:	fe312823          	sw	gp,-16(sp)
+    2478:	000021b7          	lui	gp,0x2
+    247c:	39418193          	addi	gp,gp,916 # 2394 <and_754+0xa4>
+    2480:	fe312623          	sw	gp,-20(sp)
+    2484:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    2488:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+0000248c <andi_773>:
+    248c:	00300213          	addi	tp,zero,3
+
+00002490 <and_774>:
+    2490:	fec12823          	sw	a2,-16(sp)
+    2494:	fe412623          	sw	tp,-20(sp)
+    2498:	00003637          	lui	a2,0x3
+    249c:	a0060613          	addi	a2,a2,-1536 # 2a00 <_logic_shift_table>
+    24a0:	fe012223          	sw	zero,-28(sp)
+    24a4:	ff314203          	lbu	tp,-13(sp)
+    24a8:	fe4102a3          	sb	tp,-27(sp)
+    24ac:	fef14203          	lbu	tp,-17(sp)
+    24b0:	fe410223          	sb	tp,-28(sp)
+    24b4:	fe412203          	lw	tp,-28(sp)
+    24b8:	00460233          	add	tp,a2,tp
+    24bc:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    24c0:	fe4105a3          	sb	tp,-21(sp)
+    24c4:	ff214203          	lbu	tp,-14(sp)
+    24c8:	fe4102a3          	sb	tp,-27(sp)
+    24cc:	fee14203          	lbu	tp,-18(sp)
+    24d0:	fe410223          	sb	tp,-28(sp)
+    24d4:	fe412203          	lw	tp,-28(sp)
+    24d8:	00460233          	add	tp,a2,tp
+    24dc:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    24e0:	fe410523          	sb	tp,-22(sp)
+    24e4:	ff114203          	lbu	tp,-15(sp)
+    24e8:	fe4102a3          	sb	tp,-27(sp)
+    24ec:	fed14203          	lbu	tp,-19(sp)
+    24f0:	fe410223          	sb	tp,-28(sp)
+    24f4:	fe412203          	lw	tp,-28(sp)
+    24f8:	00460233          	add	tp,a2,tp
+    24fc:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2500:	fe4104a3          	sb	tp,-23(sp)
+    2504:	ff014203          	lbu	tp,-16(sp)
+    2508:	fe4102a3          	sb	tp,-27(sp)
+    250c:	fec14203          	lbu	tp,-20(sp)
+    2510:	fe410223          	sb	tp,-28(sp)
+    2514:	fe412203          	lw	tp,-28(sp)
+    2518:	00460233          	add	tp,a2,tp
+    251c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2520:	fe410423          	sb	tp,-24(sp)
+    2524:	fe812603          	lw	a2,-24(sp)
+    2528:	005585b3          	add	a1,a1,t0
+
+0000252c <bne_781.L70>:
+    252c:	fec12823          	sw	a2,-16(sp)
+    2530:	fe812e23          	sw	s0,-4(sp)
+    2534:	00003437          	lui	s0,0x3
+    2538:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+    253c:	ff014183          	lbu	gp,-16(sp)
+    2540:	003401b3          	add	gp,s0,gp
+    2544:	0001c183          	lbu	gp,0(gp)
+    2548:	ff114203          	lbu	tp,-15(sp)
+    254c:	00440233          	add	tp,s0,tp
+    2550:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2554:	004181b3          	add	gp,gp,tp
+    2558:	ff214203          	lbu	tp,-14(sp)
+    255c:	00440233          	add	tp,s0,tp
+    2560:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2564:	004181b3          	add	gp,gp,tp
+    2568:	ff314203          	lbu	tp,-13(sp)
+    256c:	00440233          	add	tp,s0,tp
+    2570:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2574:	004181b3          	add	gp,gp,tp
+    2578:	00003237          	lui	tp,0x3
+    257c:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    2580:	00320233          	add	tp,tp,gp
+    2584:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2588:	ffc12403          	lw	s0,-4(sp)
+
+0000258c <slli_790>:
+    258c:	00420233          	add	tp,tp,tp
+    2590:	00420233          	add	tp,tp,tp
+    2594:	00410233          	add	tp,sp,tp
+    2598:	000021b7          	lui	gp,0x2
+    259c:	5b818193          	addi	gp,gp,1464 # 25b8 <non_taken_781.L70>
+    25a0:	fe312823          	sw	gp,-16(sp)
+    25a4:	000021b7          	lui	gp,0x2
+    25a8:	a0418193          	addi	gp,gp,-1532 # 1a04 <non_taken_612.L95>
+    25ac:	fe312623          	sw	gp,-20(sp)
+    25b0:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    25b4:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+000025b8 <non_taken_781.L70>:
+    25b8:	00002237          	lui	tp,0x2
+    25bc:	67020213          	addi	tp,tp,1648 # 2670 <non_taken_795.L70+0x1c>
+    25c0:	00020067          	jalr	zero,0(tp) # 0 <_start>
+    25c4:	00050793          	addi	a5,a0,0
+
+000025c8 <bne_795.L70>:
+    25c8:	fec12823          	sw	a2,-16(sp)
+    25cc:	fe812e23          	sw	s0,-4(sp)
+    25d0:	00003437          	lui	s0,0x3
+    25d4:	80840413          	addi	s0,s0,-2040 # 2808 <_check_8bit_0_table>
+    25d8:	ff014183          	lbu	gp,-16(sp)
+    25dc:	003401b3          	add	gp,s0,gp
+    25e0:	0001c183          	lbu	gp,0(gp)
+    25e4:	ff114203          	lbu	tp,-15(sp)
+    25e8:	00440233          	add	tp,s0,tp
+    25ec:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    25f0:	004181b3          	add	gp,gp,tp
+    25f4:	ff214203          	lbu	tp,-14(sp)
+    25f8:	00440233          	add	tp,s0,tp
+    25fc:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2600:	004181b3          	add	gp,gp,tp
+    2604:	ff314203          	lbu	tp,-13(sp)
+    2608:	00440233          	add	tp,s0,tp
+    260c:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2610:	004181b3          	add	gp,gp,tp
+    2614:	00003237          	lui	tp,0x3
+    2618:	80020213          	addi	tp,tp,-2048 # 2800 <_same_result_table>
+    261c:	00320233          	add	tp,tp,gp
+    2620:	00024203          	lbu	tp,0(tp) # 0 <_start>
+    2624:	ffc12403          	lw	s0,-4(sp)
+
+00002628 <slli_804>:
+    2628:	00420233          	add	tp,tp,tp
+    262c:	00420233          	add	tp,tp,tp
+    2630:	00410233          	add	tp,sp,tp
+    2634:	000021b7          	lui	gp,0x2
+    2638:	65418193          	addi	gp,gp,1620 # 2654 <non_taken_795.L70>
+    263c:	fe312823          	sw	gp,-16(sp)
+    2640:	000021b7          	lui	gp,0x2
+    2644:	a0418193          	addi	gp,gp,-1532 # 1a04 <non_taken_612.L95>
+    2648:	fe312623          	sw	gp,-20(sp)
+    264c:	fec22203          	lw	tp,-20(tp) # ffffffec <_end+0xfff6cfec>
+    2650:	00020067          	jalr	zero,0(tp) # 0 <_start>
+
+00002654 <non_taken_795.L70>:
+    2654:	00002237          	lui	tp,0x2
+    2658:	67020213          	addi	tp,tp,1648 # 2670 <non_taken_795.L70+0x1c>
+    265c:	00020067          	jalr	zero,0(tp) # 0 <_start>
+    2660:	00050793          	addi	a5,a0,0
+    2664:	00002237          	lui	tp,0x2
+    2668:	a0420213          	addi	tp,tp,-1532 # 1a04 <non_taken_612.L95>
+    266c:	00020067          	jalr	zero,0(tp) # 0 <_start>
+    2670:	00008067          	jalr	zero,0(ra)
+    2674:	00068293          	addi	t0,a3,0
+    2678:	00001237          	lui	tp,0x1
+    267c:	72c20213          	addi	tp,tp,1836 # 172c <non_taken_572.L67>
+    2680:	00020067          	jalr	zero,0(tp) # 0 <_start>
